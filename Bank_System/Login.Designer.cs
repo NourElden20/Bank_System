@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.textBox5 = new System.Windows.Forms.Textbox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            //
+            // tectbox5
+            //
+            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.textBox5.Location = new System.Drawing.Point(300, 400);
+            this.textBox5.Multiline = false;
+            this.textBox5.Name = "textBox4";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(226, 43);
+            this.textBox5.TabIndex = 6;
+            this.textBox5.Text = "Exit";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
