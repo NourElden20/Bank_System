@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0AEA2D7-A8B1-4030-943E-E0A4DF9D34FF}</ProjectGuid>
+    <ProjectGuid>{0743512B-44E9-4B21-A7A7-D24964E36F9F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Bank_System</RootNamespace>
-    <AssemblyName>Bank_System</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>POM_Bank_System</RootNamespace>
+    <AssemblyName>POM Bank System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -33,6 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,45 +61,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Admin.cs" />
-    <Compile Include="Classes\LUser.cs" />
-    <Compile Include="Classes\MidUser.cs" />
-    <Compile Include="Interfaces\IAdmin.cs" />
-    <Compile Include="Interfaces\IMidUser.cs" />
-    <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Forms\Login.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main Menu.cs">
+    <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Main Menu.Designer.cs">
-      <DependentUpon>Main Menu.cs</DependentUpon>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\Transactions.cs">
+    <Compile Include="TransactionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Transactions.Designer.cs">
-      <DependentUpon>Transactions.cs</DependentUpon>
+    <Compile Include="TransactionsForm.Designer.cs">
+      <DependentUpon>TransactionsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Users.cs">
+    <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Users.Designer.cs">
-      <DependentUpon>Users.cs</DependentUpon>
+    <Compile Include="UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\WorkingArea.cs" />
-    <EmbeddedResource Include="Forms\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Main Menu.resx">
-      <DependentUpon>Main Menu.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,12 +101,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Forms\Transactions.resx">
-      <DependentUpon>Transactions.cs</DependentUpon>
+    <EmbeddedResource Include="TransactionsForm.resx">
+      <DependentUpon>TransactionsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users.resx">
-      <DependentUpon>Users.cs</DependentUpon>
+    <EmbeddedResource Include="UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,7 +123,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TEMP-PROJECT FILES\" />
+    <None Include="Resources\pom logo resized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9907646.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12083339_Wavy_Bus-17_Single-02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-24-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-24-xxl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-24-xxl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-24-xxl3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8496210.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
