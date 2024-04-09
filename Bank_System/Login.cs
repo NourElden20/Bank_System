@@ -17,6 +17,6 @@ namespace Bank_System
             InitializeComponent();
         }
 
-
+       
     }
 }

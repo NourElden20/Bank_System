@@ -30,81 +30,81 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transactions));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.DepositButton = new System.Windows.Forms.Button();
+            this.ShowBalanceButton = new System.Windows.Forms.Button();
+            this.WithdrawButton = new System.Windows.Forms.Button();
+            this.BackTButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(101, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(90, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 107);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // DepositButton
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkGreen;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button3.Location = new System.Drawing.Point(90, 210);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(254, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Deposit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.DepositButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DepositButton.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepositButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.DepositButton.Location = new System.Drawing.Point(90, 210);
+            this.DepositButton.Name = "DepositButton";
+            this.DepositButton.Size = new System.Drawing.Size(254, 40);
+            this.DepositButton.TabIndex = 5;
+            this.DepositButton.Text = "Deposit";
+            this.DepositButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // ShowBalanceButton
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGreen;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Location = new System.Drawing.Point(90, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(254, 40);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Show Balance";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ShowBalanceButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ShowBalanceButton.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowBalanceButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.ShowBalanceButton.Location = new System.Drawing.Point(90, 332);
+            this.ShowBalanceButton.Name = "ShowBalanceButton";
+            this.ShowBalanceButton.Size = new System.Drawing.Size(254, 40);
+            this.ShowBalanceButton.TabIndex = 6;
+            this.ShowBalanceButton.Text = "Show Balance";
+            this.ShowBalanceButton.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // WithdrawButton
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOrange;
-            this.button4.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button4.Location = new System.Drawing.Point(90, 256);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(254, 40);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Withdraw";
-            this.button4.UseVisualStyleBackColor = false;
+            this.WithdrawButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.WithdrawButton.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WithdrawButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.WithdrawButton.Location = new System.Drawing.Point(90, 269);
+            this.WithdrawButton.Name = "WithdrawButton";
+            this.WithdrawButton.Size = new System.Drawing.Size(254, 40);
+            this.WithdrawButton.TabIndex = 14;
+            this.WithdrawButton.Text = "Withdraw";
+            this.WithdrawButton.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // BackTButton
             // 
-            this.button7.BackColor = System.Drawing.Color.Yellow;
-            this.button7.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button7.Location = new System.Drawing.Point(163, 452);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(112, 54);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "Back";
-            this.button7.UseVisualStyleBackColor = false;
+            this.BackTButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackTButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackTButton.ForeColor = System.Drawing.Color.White;
+            this.BackTButton.Location = new System.Drawing.Point(157, 442);
+            this.BackTButton.Name = "BackTButton";
+            this.BackTButton.Size = new System.Drawing.Size(112, 54);
+            this.BackTButton.TabIndex = 16;
+            this.BackTButton.Text = "Back";
+            this.BackTButton.UseVisualStyleBackColor = false;
             // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(457, 551);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BackTButton);
+            this.Controls.Add(this.WithdrawButton);
+            this.Controls.Add(this.ShowBalanceButton);
+            this.Controls.Add(this.DepositButton);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Transactions";
@@ -117,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button DepositButton;
+        private System.Windows.Forms.Button ShowBalanceButton;
+        private System.Windows.Forms.Button WithdrawButton;
+        private System.Windows.Forms.Button BackTButton;
     }
 }
