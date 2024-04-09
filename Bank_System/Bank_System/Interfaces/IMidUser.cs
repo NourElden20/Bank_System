@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bank_System
 {
-    internal interface IMidUser:ILowUser
+    internal interface IMidUser :IUser
     {
         void AddNewUser();
         void DeleteUser();
         void FindUser();
-        
+    } 
 }
