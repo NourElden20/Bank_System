@@ -7,16 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Bank_System
 {
-    public partial class Main_Menu : Form
+    public partial class UsersForm : KryptonForm
     {
-        public Main_Menu()
+        public UsersForm()
         {
             InitializeComponent();
         }
 
-        
+        private void UsersForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

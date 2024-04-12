@@ -1,4 +1,4 @@
-﻿namespace POM_Bank_System
+﻿namespace Bank_System
 {
     partial class Login_Form
     {
@@ -41,9 +41,9 @@
             // 
             // kryptonPalette1
             // 
-            this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::POM_Bank_System.Properties.Resources.image;
-            this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::POM_Bank_System.Properties.Resources.image__2_;
-            this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::POM_Bank_System.Properties.Resources.image__1_;
+            this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::Bank_System.Properties.Resources.image;
+            this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::Bank_System.Properties.Resources.image__2_;
+            this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::Bank_System.Properties.Resources.image__1_;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Color1 = System.Drawing.Color.White;
@@ -204,7 +204,7 @@
             // 
             // h_pic
             // 
-            this.h_pic.Image = global::POM_Bank_System.Properties.Resources.pom_logo_resized;
+            this.h_pic.Image = global::Bank_System.Properties.Resources.pom_logo_resized;
             this.h_pic.Location = new System.Drawing.Point(12, 12);
             this.h_pic.Name = "h_pic";
             this.h_pic.Size = new System.Drawing.Size(385, 401);

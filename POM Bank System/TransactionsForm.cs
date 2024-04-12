@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
-namespace POM_Bank_System
+namespace Bank_System
 {
-    public partial class MainMenuForm : KryptonForm
+    public partial class TransactionsForm : KryptonForm
     {
-        public MainMenuForm()
+        public TransactionsForm()
         {
             InitializeComponent();
         }
 
-        private void MainMenuForm_Load(object sender, EventArgs e)
+        private void Transactions_Form_Load(object sender, EventArgs e)
         {
 
         }

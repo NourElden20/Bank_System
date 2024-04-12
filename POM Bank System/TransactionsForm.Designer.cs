@@ -1,4 +1,4 @@
-﻿namespace POM_Bank_System
+﻿namespace Bank_System
 {
     partial class TransactionsForm
     {
@@ -40,9 +40,9 @@
             // 
             // kryptonPalette1
             // 
-            this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::POM_Bank_System.Properties.Resources.image;
-            this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::POM_Bank_System.Properties.Resources.image__2_;
-            this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::POM_Bank_System.Properties.Resources.image__1_;
+            this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::Bank_System.Properties.Resources.image;
+            this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::Bank_System.Properties.Resources.image__2_;
+            this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::Bank_System.Properties.Resources.image__1_;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Color1 = System.Drawing.Color.White;
@@ -313,13 +313,13 @@
             this.MainMenu_Button.StateTracking.Border.Rounding = 20;
             this.MainMenu_Button.StateTracking.Border.Width = 1;
             this.MainMenu_Button.TabIndex = 40;
-            this.MainMenu_Button.Values.Image = global::POM_Bank_System.Properties.Resources.arrow_24_xxl3;
+            this.MainMenu_Button.Values.Image = global::Bank_System.Properties.Resources.arrow_24_xxl3;
             this.MainMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MainMenu_Button.Values.Text = "Main Menu";
             // 
             // T_pic
             // 
-            this.T_pic.Image = global::POM_Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
+            this.T_pic.Image = global::Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
             this.T_pic.Location = new System.Drawing.Point(603, 12);
             this.T_pic.Name = "T_pic";
             this.T_pic.Size = new System.Drawing.Size(649, 674);

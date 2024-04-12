@@ -1,4 +1,4 @@
-﻿namespace POM_Bank_System
+﻿namespace Bank_System
 {
     partial class MainMenuForm
     {
@@ -44,9 +44,9 @@
             // 
             // kryptonPalette1
             // 
-            this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::POM_Bank_System.Properties.Resources.image;
-            this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::POM_Bank_System.Properties.Resources.image__2_;
-            this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::POM_Bank_System.Properties.Resources.image__1_;
+            this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::Bank_System.Properties.Resources.image;
+            this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::Bank_System.Properties.Resources.image__2_;
+            this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::Bank_System.Properties.Resources.image__1_;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Color1 = System.Drawing.Color.White;
@@ -553,7 +553,7 @@
             // 
             // MM_pic
             // 
-            this.MM_pic.Image = global::POM_Bank_System.Properties.Resources._9907646;
+            this.MM_pic.Image = global::Bank_System.Properties.Resources._9907646;
             this.MM_pic.Location = new System.Drawing.Point(621, -5);
             this.MM_pic.Name = "MM_pic";
             this.MM_pic.Size = new System.Drawing.Size(649, 674);
