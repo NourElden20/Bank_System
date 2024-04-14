@@ -122,7 +122,7 @@
             this.Password_TextBox.StateCommon.Content.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password_TextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Password_TextBox.TabIndex = 19;
-            this.Password_TextBox.Text = "Name";
+            this.Password_TextBox.Text = "Password";
             // 
             // Login_Button
             // 
