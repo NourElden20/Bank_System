@@ -332,7 +332,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1263, 692);
             this.Controls.Add(this.MainMenu_Button);
             this.Controls.Add(this.Withdraw_Button);
             this.Controls.Add(this.Deposit_Button);

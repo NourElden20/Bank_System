@@ -109,6 +109,12 @@
     <Compile Include="UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WithdrawForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawForm.Designer.cs">
+      <DependentUpon>WithdrawForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawForm.resx">
+      <DependentUpon>WithdrawForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
