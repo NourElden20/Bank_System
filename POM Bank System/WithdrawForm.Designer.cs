@@ -49,6 +49,8 @@
             this.Withdraw_Label = new System.Windows.Forms.Label();
             this.Withdraw_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Withdraw_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.NewBalance_Label = new System.Windows.Forms.Label();
+            this.NewBalance_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.T_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -295,7 +297,7 @@
             // 
             this.Withdraw_Label.AutoSize = true;
             this.Withdraw_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdraw_Label.Location = new System.Drawing.Point(73, 530);
+            this.Withdraw_Label.Location = new System.Drawing.Point(73, 531);
             this.Withdraw_Label.Name = "Withdraw_Label";
             this.Withdraw_Label.Size = new System.Drawing.Size(161, 22);
             this.Withdraw_Label.TabIndex = 26;
@@ -303,14 +305,14 @@
             // 
             // Withdraw_TextBox
             // 
-            this.Withdraw_TextBox.Location = new System.Drawing.Point(291, 530);
+            this.Withdraw_TextBox.Location = new System.Drawing.Point(291, 531);
             this.Withdraw_TextBox.Name = "Withdraw_TextBox";
             this.Withdraw_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Withdraw_TextBox.TabIndex = 50;
             // 
             // Withdraw_Button
             // 
-            this.Withdraw_Button.Location = new System.Drawing.Point(167, 581);
+            this.Withdraw_Button.Location = new System.Drawing.Point(169, 575);
             this.Withdraw_Button.Name = "Withdraw_Button";
             this.Withdraw_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Withdraw_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -366,12 +368,29 @@
             this.Withdraw_Button.TabIndex = 34;
             this.Withdraw_Button.Values.Text = "Withdraw";
             // 
+            // NewBalance_Label
+            // 
+            this.NewBalance_Label.AutoSize = true;
+            this.NewBalance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewBalance_Label.Location = new System.Drawing.Point(73, 646);
+            this.NewBalance_Label.Name = "NewBalance_Label";
+            this.NewBalance_Label.Size = new System.Drawing.Size(126, 22);
+            this.NewBalance_Label.TabIndex = 26;
+            this.NewBalance_Label.Text = "New Balance :";
+            // 
+            // NewBalance_TextBox
+            // 
+            this.NewBalance_TextBox.Location = new System.Drawing.Point(291, 646);
+            this.NewBalance_TextBox.Name = "NewBalance_TextBox";
+            this.NewBalance_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.NewBalance_TextBox.TabIndex = 50;
+            // 
             // WithdrawForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1276, 699);
+            this.ClientSize = new System.Drawing.Size(1276, 709);
             this.Controls.Add(this.T_pic);
             this.Controls.Add(this.Account_Number_Label);
             this.Controls.Add(this.Account_Number_TextBox);
@@ -391,6 +410,8 @@
             this.Controls.Add(this.Withdraw_Label);
             this.Controls.Add(this.Withdraw_TextBox);
             this.Controls.Add(this.Withdraw_Button);
+            this.Controls.Add(this.NewBalance_Label);
+            this.Controls.Add(this.NewBalance_TextBox);
             this.Name = "WithdrawForm";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -424,6 +445,8 @@
         private System.Windows.Forms.Label Withdraw_Label;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox Withdraw_TextBox;
         public ComponentFactory.Krypton.Toolkit.KryptonButton Withdraw_Button;
+        private System.Windows.Forms.Label NewBalance_Label;
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox NewBalance_TextBox;
 
     }
 }
