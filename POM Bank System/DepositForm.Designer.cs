@@ -1,6 +1,6 @@
 ﻿namespace Bank_System
 {
-    partial class WithdrawForm
+    partial class DepositForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.T_pic = new System.Windows.Forms.PictureBox();
             this.Account_Number_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Account_Number_Label = new System.Windows.Forms.Label();
             this.Enter_AccNumber_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -44,13 +45,12 @@
             this.Client_Name_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Client_Phone_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Account_Balance_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Withdrawing_Title_Label = new System.Windows.Forms.Label();
-            this.Withdraw_Label = new System.Windows.Forms.Label();
-            this.Withdraw_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Withdraw_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Depositing_Title_Label = new System.Windows.Forms.Label();
+            this.Deposit_Label = new System.Windows.Forms.Label();
+            this.Deposit_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.Deposit_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.NewBalance_Label = new System.Windows.Forms.Label();
             this.NewBalance_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.T_pic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.T_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,9 +99,19 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
+            // T_pic
+            // 
+            this.T_pic.Image = global::Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
+            this.T_pic.Location = new System.Drawing.Point(603, 12);
+            this.T_pic.Name = "T_pic";
+            this.T_pic.Size = new System.Drawing.Size(649, 674);
+            this.T_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T_pic.TabIndex = 34;
+            this.T_pic.TabStop = false;
+            // 
             // Account_Number_TextBox
             // 
-            this.Account_Number_TextBox.Location = new System.Drawing.Point(291, 65);
+            this.Account_Number_TextBox.Location = new System.Drawing.Point(291, 66);
             this.Account_Number_TextBox.Name = "Account_Number_TextBox";
             this.Account_Number_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_TextBox.TabIndex = 44;
@@ -110,7 +120,7 @@
             // 
             this.Account_Number_Label.AutoSize = true;
             this.Account_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Account_Number_Label.Location = new System.Drawing.Point(73, 65);
+            this.Account_Number_Label.Location = new System.Drawing.Point(70, 66);
             this.Account_Number_Label.Name = "Account_Number_Label";
             this.Account_Number_Label.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_Label.TabIndex = 25;
@@ -178,7 +188,7 @@
             // 
             this.Account_Number_DetailsLabel.AutoSize = true;
             this.Account_Number_DetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(73, 245);
+            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(70, 244);
             this.Account_Number_DetailsLabel.Name = "Account_Number_DetailsLabel";
             this.Account_Number_DetailsLabel.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_DetailsLabel.TabIndex = 25;
@@ -238,7 +248,7 @@
             // 
             // Account_Number_DetailsTextBox
             // 
-            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(291, 244);
+            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(291, 243);
             this.Account_Number_DetailsTextBox.Name = "Account_Number_DetailsTextBox";
             this.Account_Number_DetailsTextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_DetailsTextBox.TabIndex = 44;
@@ -271,92 +281,92 @@
             this.Account_Balance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Balance_TextBox.TabIndex = 45;
             // 
-            // Withdrawing_Title_Label
+            // Depositing_Title_Label
             // 
-            this.Withdrawing_Title_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
-            this.Withdrawing_Title_Label.AutoSize = true;
-            this.Withdrawing_Title_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdrawing_Title_Label.Location = new System.Drawing.Point(171, 474);
-            this.Withdrawing_Title_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Withdrawing_Title_Label.Name = "Withdrawing_Title_Label";
-            this.Withdrawing_Title_Label.Size = new System.Drawing.Size(201, 36);
-            this.Withdrawing_Title_Label.TabIndex = 43;
-            this.Withdrawing_Title_Label.Text = "Withdrawing :";
+            this.Depositing_Title_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
+            this.Depositing_Title_Label.AutoSize = true;
+            this.Depositing_Title_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Depositing_Title_Label.Location = new System.Drawing.Point(171, 474);
+            this.Depositing_Title_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Depositing_Title_Label.Name = "Depositing_Title_Label";
+            this.Depositing_Title_Label.Size = new System.Drawing.Size(167, 36);
+            this.Depositing_Title_Label.TabIndex = 43;
+            this.Depositing_Title_Label.Text = "Depositing :";
             // 
-            // Withdraw_Label
+            // Deposit_Label
             // 
-            this.Withdraw_Label.AutoSize = true;
-            this.Withdraw_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdraw_Label.Location = new System.Drawing.Point(73, 531);
-            this.Withdraw_Label.Name = "Withdraw_Label";
-            this.Withdraw_Label.Size = new System.Drawing.Size(161, 22);
-            this.Withdraw_Label.TabIndex = 26;
-            this.Withdraw_Label.Text = "Withdraw Amount :";
+            this.Deposit_Label.AutoSize = true;
+            this.Deposit_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deposit_Label.Location = new System.Drawing.Point(73, 531);
+            this.Deposit_Label.Name = "Deposit_Label";
+            this.Deposit_Label.Size = new System.Drawing.Size(147, 22);
+            this.Deposit_Label.TabIndex = 26;
+            this.Deposit_Label.Text = "Deposit Amount :";
             // 
-            // Withdraw_TextBox
+            // Deposit_TextBox
             // 
-            this.Withdraw_TextBox.Location = new System.Drawing.Point(291, 531);
-            this.Withdraw_TextBox.Name = "Withdraw_TextBox";
-            this.Withdraw_TextBox.Size = new System.Drawing.Size(193, 23);
-            this.Withdraw_TextBox.TabIndex = 50;
+            this.Deposit_TextBox.Location = new System.Drawing.Point(291, 531);
+            this.Deposit_TextBox.Name = "Deposit_TextBox";
+            this.Deposit_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.Deposit_TextBox.TabIndex = 50;
             // 
-            // Withdraw_Button
+            // Deposit_Button
             // 
-            this.Withdraw_Button.Location = new System.Drawing.Point(169, 575);
-            this.Withdraw_Button.Name = "Withdraw_Button";
-            this.Withdraw_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.OverrideDefault.Back.ColorAngle = 45F;
-            this.Withdraw_Button.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.OverrideDefault.Border.ColorAngle = 45F;
-            this.Withdraw_Button.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Deposit_Button.Location = new System.Drawing.Point(159, 575);
+            this.Deposit_Button.Name = "Deposit_Button";
+            this.Deposit_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.OverrideDefault.Back.ColorAngle = 45F;
+            this.Deposit_Button.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.OverrideDefault.Border.ColorAngle = 45F;
+            this.Deposit_Button.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Withdraw_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Withdraw_Button.OverrideDefault.Border.Rounding = 20;
-            this.Withdraw_Button.OverrideDefault.Border.Width = 1;
-            this.Withdraw_Button.Size = new System.Drawing.Size(203, 47);
-            this.Withdraw_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StateCommon.Back.ColorAngle = 45F;
-            this.Withdraw_Button.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StateCommon.Border.ColorAngle = 45F;
-            this.Withdraw_Button.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Deposit_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Deposit_Button.OverrideDefault.Border.Rounding = 20;
+            this.Deposit_Button.OverrideDefault.Border.Width = 1;
+            this.Deposit_Button.Size = new System.Drawing.Size(203, 47);
+            this.Deposit_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StateCommon.Back.ColorAngle = 45F;
+            this.Deposit_Button.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StateCommon.Border.ColorAngle = 45F;
+            this.Deposit_Button.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Withdraw_Button.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Withdraw_Button.StateCommon.Border.Rounding = 20;
-            this.Withdraw_Button.StateCommon.Border.Width = 1;
-            this.Withdraw_Button.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.Withdraw_Button.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.Withdraw_Button.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdraw_Button.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StatePressed.Back.ColorAngle = 135F;
-            this.Withdraw_Button.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StatePressed.Border.ColorAngle = 135F;
-            this.Withdraw_Button.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Deposit_Button.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Deposit_Button.StateCommon.Border.Rounding = 20;
+            this.Deposit_Button.StateCommon.Border.Width = 1;
+            this.Deposit_Button.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.Deposit_Button.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.Deposit_Button.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deposit_Button.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StatePressed.Back.ColorAngle = 135F;
+            this.Deposit_Button.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StatePressed.Border.ColorAngle = 135F;
+            this.Deposit_Button.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Withdraw_Button.StatePressed.Border.Rounding = 20;
-            this.Withdraw_Button.StatePressed.Border.Width = 1;
-            this.Withdraw_Button.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
-            this.Withdraw_Button.StateTracking.Back.ColorAngle = 45F;
-            this.Withdraw_Button.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(49)))));
-            this.Withdraw_Button.StateTracking.Border.ColorAngle = 45F;
-            this.Withdraw_Button.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Deposit_Button.StatePressed.Border.Rounding = 20;
+            this.Deposit_Button.StatePressed.Border.Width = 1;
+            this.Deposit_Button.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
+            this.Deposit_Button.StateTracking.Back.ColorAngle = 45F;
+            this.Deposit_Button.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(49)))));
+            this.Deposit_Button.StateTracking.Border.ColorAngle = 45F;
+            this.Deposit_Button.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Withdraw_Button.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Withdraw_Button.StateTracking.Border.Rounding = 20;
-            this.Withdraw_Button.StateTracking.Border.Width = 1;
-            this.Withdraw_Button.TabIndex = 34;
-            this.Withdraw_Button.Values.Text = "Withdraw";
+            this.Deposit_Button.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Deposit_Button.StateTracking.Border.Rounding = 20;
+            this.Deposit_Button.StateTracking.Border.Width = 1;
+            this.Deposit_Button.TabIndex = 34;
+            this.Deposit_Button.Values.Text = "Deposit";
             // 
             // NewBalance_Label
             // 
@@ -375,17 +385,7 @@
             this.NewBalance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.NewBalance_TextBox.TabIndex = 50;
             // 
-            // T_pic
-            // 
-            this.T_pic.Image = global::Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
-            this.T_pic.Location = new System.Drawing.Point(603, 12);
-            this.T_pic.Name = "T_pic";
-            this.T_pic.Size = new System.Drawing.Size(649, 674);
-            this.T_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.T_pic.TabIndex = 34;
-            this.T_pic.TabStop = false;
-            // 
-            // WithdrawForm
+            // DepositForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -406,18 +406,18 @@
             this.Controls.Add(this.PINCode_TextBox);
             this.Controls.Add(this.Client_Phone_TextBox);
             this.Controls.Add(this.Client_Name_TextBox);
-            this.Controls.Add(this.Withdrawing_Title_Label);
-            this.Controls.Add(this.Withdraw_Label);
-            this.Controls.Add(this.Withdraw_TextBox);
-            this.Controls.Add(this.Withdraw_Button);
+            this.Controls.Add(this.Depositing_Title_Label);
+            this.Controls.Add(this.Deposit_Label);
+            this.Controls.Add(this.Deposit_TextBox);
+            this.Controls.Add(this.Deposit_Button);
             this.Controls.Add(this.NewBalance_Label);
             this.Controls.Add(this.NewBalance_TextBox);
-            this.Name = "WithdrawForm";
+            this.Name = "DepositForm";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Withdraw Screen";
+            this.Text = "Deposit Screen";
             ((System.ComponentModel.ISupportInitialize)(this.T_pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -425,6 +425,7 @@
         }
 
         #endregion
+
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.Windows.Forms.PictureBox T_pic;
         private System.Windows.Forms.Label Client_Details_Label;
@@ -441,10 +442,10 @@
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox Client_Name_TextBox;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox Client_Phone_TextBox;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox Account_Balance_TextBox;
-        private System.Windows.Forms.Label Withdrawing_Title_Label;
-        private System.Windows.Forms.Label Withdraw_Label;
-        public ComponentFactory.Krypton.Toolkit.KryptonTextBox Withdraw_TextBox;
-        public ComponentFactory.Krypton.Toolkit.KryptonButton Withdraw_Button;
+        private System.Windows.Forms.Label Depositing_Title_Label;
+        private System.Windows.Forms.Label Deposit_Label;
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox Deposit_TextBox;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton Deposit_Button;
         private System.Windows.Forms.Label NewBalance_Label;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox NewBalance_TextBox;
 
