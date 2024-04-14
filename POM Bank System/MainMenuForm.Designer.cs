@@ -554,9 +554,9 @@
             // MM_pic
             // 
             this.MM_pic.Image = global::Bank_System.Properties.Resources._9907646;
-            this.MM_pic.Location = new System.Drawing.Point(621, -5);
+            this.MM_pic.Location = new System.Drawing.Point(623, -5);
             this.MM_pic.Name = "MM_pic";
-            this.MM_pic.Size = new System.Drawing.Size(649, 674);
+            this.MM_pic.Size = new System.Drawing.Size(647, 674);
             this.MM_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MM_pic.TabIndex = 33;
             this.MM_pic.TabStop = false;
