@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\LUser.cs" />
+    <Compile Include="Classes\MidUser.cs" />
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\WorkingArea.cs" />
     <Compile Include="ClientListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,9 +180,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
