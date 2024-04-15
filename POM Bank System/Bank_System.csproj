@@ -74,29 +74,9 @@
     <Compile Include="ClientListForm.Designer.cs">
       <DependentUpon>ClientListForm.cs</DependentUpon>
     </Compile>
-    master
-    <Compile Include="DeleteClientForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteClientForm.Designer.cs">
-      <DependentUpon>DeleteClientForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DepositForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DepositForm.Designer.cs">
-      <DependentUpon>DepositForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FindClientForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FindClientForm.Designer.cs">
-      <DependentUpon>FindClientForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IMidUser.cs" />
     <Compile Include="Interfaces\IUser.cs" />
-    master
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,23 +115,11 @@
     <Compile Include="WithdrawForm.Designer.cs">
       <DependentUpon>WithdrawForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DeleteClientForm.resx">
-      <DependentUpon>DeleteClientForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DepositForm.resx">
-      <DependentUpon>DepositForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FindClientForm.resx">
-      <DependentUpon>FindClientForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewClientForm.resx">
-      <DependentUpon>NewClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
