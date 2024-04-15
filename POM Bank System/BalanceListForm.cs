@@ -1,5 +1,4 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using ComponentFactory.Krypton.Toolkit;
 namespace Bank_System
 {
-    public partial class WithdrawForm : KryptonForm
+    public partial class BalanceListForm : KryptonForm
     {
-        public WithdrawForm()
+        public BalanceListForm()
         {
             InitializeComponent();
+        }
+
+        private void BalanceListForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
