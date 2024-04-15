@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
+
 namespace Bank_System
 {
-    public partial class NewClient : KryptonForm
+    public partial class FindClientForm : KryptonForm
     {
-        public NewClient()
+        public FindClientForm()
         {
             InitializeComponent();
         }
