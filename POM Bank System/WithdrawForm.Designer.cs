@@ -51,7 +51,10 @@
             this.NewBalance_Label = new System.Windows.Forms.Label();
             this.NewBalance_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.T_pic = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
             this.TransactionMenu_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+=======
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             ((System.ComponentModel.ISupportInitialize)(this.T_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +105,11 @@
             // 
             // Account_Number_TextBox
             // 
+<<<<<<< HEAD
             this.Account_Number_TextBox.Location = new System.Drawing.Point(291, 65);
+=======
+            this.Account_Number_TextBox.Location = new System.Drawing.Point(296, 217);
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Account_Number_TextBox.Name = "Account_Number_TextBox";
             this.Account_Number_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_TextBox.TabIndex = 44;
@@ -111,7 +118,11 @@
             // 
             this.Account_Number_Label.AutoSize = true;
             this.Account_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.Account_Number_Label.Location = new System.Drawing.Point(73, 65);
+=======
+            this.Account_Number_Label.Location = new System.Drawing.Point(78, 218);
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Account_Number_Label.Name = "Account_Number_Label";
             this.Account_Number_Label.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_Label.TabIndex = 25;
@@ -119,7 +130,7 @@
             // 
             // Enter_AccNumber_Button
             // 
-            this.Enter_AccNumber_Button.Location = new System.Drawing.Point(159, 116);
+            this.Enter_AccNumber_Button.Location = new System.Drawing.Point(164, 89);
             this.Enter_AccNumber_Button.Name = "Enter_AccNumber_Button";
             this.Enter_AccNumber_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Enter_AccNumber_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -179,7 +190,11 @@
             // 
             this.Account_Number_DetailsLabel.AutoSize = true;
             this.Account_Number_DetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(73, 245);
+=======
+            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(78, 39);
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Account_Number_DetailsLabel.Name = "Account_Number_DetailsLabel";
             this.Account_Number_DetailsLabel.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_DetailsLabel.TabIndex = 25;
@@ -189,11 +204,11 @@
             // 
             this.Client_Details_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Client_Details_Label.AutoSize = true;
-            this.Client_Details_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Details_Label.Location = new System.Drawing.Point(161, 179);
+            this.Client_Details_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_Details_Label.Location = new System.Drawing.Point(166, 152);
             this.Client_Details_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Client_Details_Label.Name = "Client_Details_Label";
-            this.Client_Details_Label.Size = new System.Drawing.Size(201, 36);
+            this.Client_Details_Label.Size = new System.Drawing.Size(206, 31);
             this.Client_Details_Label.TabIndex = 43;
             this.Client_Details_Label.Text = "Client Details :";
             // 
@@ -201,7 +216,7 @@
             // 
             this.PINCode_Label.AutoSize = true;
             this.PINCode_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PINCode_Label.Location = new System.Drawing.Point(73, 291);
+            this.PINCode_Label.Location = new System.Drawing.Point(78, 264);
             this.PINCode_Label.Name = "PINCode_Label";
             this.PINCode_Label.Size = new System.Drawing.Size(92, 22);
             this.PINCode_Label.TabIndex = 26;
@@ -211,7 +226,7 @@
             // 
             this.Client_Name_Label.AutoSize = true;
             this.Client_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Name_Label.Location = new System.Drawing.Point(73, 339);
+            this.Client_Name_Label.Location = new System.Drawing.Point(78, 312);
             this.Client_Name_Label.Name = "Client_Name_Label";
             this.Client_Name_Label.Size = new System.Drawing.Size(118, 22);
             this.Client_Name_Label.TabIndex = 25;
@@ -221,7 +236,7 @@
             // 
             this.Client_Phone_Label.AutoSize = true;
             this.Client_Phone_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Phone_Label.Location = new System.Drawing.Point(73, 384);
+            this.Client_Phone_Label.Location = new System.Drawing.Point(78, 357);
             this.Client_Phone_Label.Name = "Client_Phone_Label";
             this.Client_Phone_Label.Size = new System.Drawing.Size(123, 22);
             this.Client_Phone_Label.TabIndex = 25;
@@ -231,7 +246,7 @@
             // 
             this.Account_Balance_Label.AutoSize = true;
             this.Account_Balance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Account_Balance_Label.Location = new System.Drawing.Point(73, 433);
+            this.Account_Balance_Label.Location = new System.Drawing.Point(78, 406);
             this.Account_Balance_Label.Name = "Account_Balance_Label";
             this.Account_Balance_Label.Size = new System.Drawing.Size(155, 22);
             this.Account_Balance_Label.TabIndex = 25;
@@ -239,35 +254,39 @@
             // 
             // Account_Number_DetailsTextBox
             // 
+<<<<<<< HEAD
             this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(291, 244);
+=======
+            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(296, 39);
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Account_Number_DetailsTextBox.Name = "Account_Number_DetailsTextBox";
             this.Account_Number_DetailsTextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_DetailsTextBox.TabIndex = 44;
             // 
             // PINCode_TextBox
             // 
-            this.PINCode_TextBox.Location = new System.Drawing.Point(291, 290);
+            this.PINCode_TextBox.Location = new System.Drawing.Point(296, 263);
             this.PINCode_TextBox.Name = "PINCode_TextBox";
             this.PINCode_TextBox.Size = new System.Drawing.Size(193, 23);
             this.PINCode_TextBox.TabIndex = 46;
             // 
             // Client_Name_TextBox
             // 
-            this.Client_Name_TextBox.Location = new System.Drawing.Point(291, 338);
+            this.Client_Name_TextBox.Location = new System.Drawing.Point(296, 311);
             this.Client_Name_TextBox.Name = "Client_Name_TextBox";
             this.Client_Name_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Client_Name_TextBox.TabIndex = 48;
             // 
             // Client_Phone_TextBox
             // 
-            this.Client_Phone_TextBox.Location = new System.Drawing.Point(291, 383);
+            this.Client_Phone_TextBox.Location = new System.Drawing.Point(296, 356);
             this.Client_Phone_TextBox.Name = "Client_Phone_TextBox";
             this.Client_Phone_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Client_Phone_TextBox.TabIndex = 47;
             // 
             // Account_Balance_TextBox
             // 
-            this.Account_Balance_TextBox.Location = new System.Drawing.Point(291, 432);
+            this.Account_Balance_TextBox.Location = new System.Drawing.Point(296, 405);
             this.Account_Balance_TextBox.Name = "Account_Balance_TextBox";
             this.Account_Balance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Balance_TextBox.TabIndex = 45;
@@ -276,11 +295,11 @@
             // 
             this.Withdrawing_Title_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Withdrawing_Title_Label.AutoSize = true;
-            this.Withdrawing_Title_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdrawing_Title_Label.Location = new System.Drawing.Point(171, 474);
+            this.Withdrawing_Title_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Withdrawing_Title_Label.Location = new System.Drawing.Point(176, 447);
             this.Withdrawing_Title_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Withdrawing_Title_Label.Name = "Withdrawing_Title_Label";
-            this.Withdrawing_Title_Label.Size = new System.Drawing.Size(201, 36);
+            this.Withdrawing_Title_Label.Size = new System.Drawing.Size(191, 31);
             this.Withdrawing_Title_Label.TabIndex = 43;
             this.Withdrawing_Title_Label.Text = "Withdrawing :";
             // 
@@ -288,7 +307,7 @@
             // 
             this.Withdraw_Label.AutoSize = true;
             this.Withdraw_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdraw_Label.Location = new System.Drawing.Point(73, 531);
+            this.Withdraw_Label.Location = new System.Drawing.Point(78, 504);
             this.Withdraw_Label.Name = "Withdraw_Label";
             this.Withdraw_Label.Size = new System.Drawing.Size(161, 22);
             this.Withdraw_Label.TabIndex = 26;
@@ -296,14 +315,14 @@
             // 
             // Withdraw_TextBox
             // 
-            this.Withdraw_TextBox.Location = new System.Drawing.Point(291, 531);
+            this.Withdraw_TextBox.Location = new System.Drawing.Point(296, 504);
             this.Withdraw_TextBox.Name = "Withdraw_TextBox";
             this.Withdraw_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Withdraw_TextBox.TabIndex = 50;
             // 
             // Withdraw_Button
             // 
-            this.Withdraw_Button.Location = new System.Drawing.Point(169, 575);
+            this.Withdraw_Button.Location = new System.Drawing.Point(174, 548);
             this.Withdraw_Button.Name = "Withdraw_Button";
             this.Withdraw_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Withdraw_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -363,7 +382,7 @@
             // 
             this.NewBalance_Label.AutoSize = true;
             this.NewBalance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewBalance_Label.Location = new System.Drawing.Point(73, 646);
+            this.NewBalance_Label.Location = new System.Drawing.Point(78, 619);
             this.NewBalance_Label.Name = "NewBalance_Label";
             this.NewBalance_Label.Size = new System.Drawing.Size(126, 22);
             this.NewBalance_Label.TabIndex = 26;
@@ -371,7 +390,7 @@
             // 
             // NewBalance_TextBox
             // 
-            this.NewBalance_TextBox.Location = new System.Drawing.Point(291, 646);
+            this.NewBalance_TextBox.Location = new System.Drawing.Point(296, 619);
             this.NewBalance_TextBox.Name = "NewBalance_TextBox";
             this.NewBalance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.NewBalance_TextBox.TabIndex = 50;
@@ -379,13 +398,18 @@
             // T_pic
             // 
             this.T_pic.Image = global::Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
+<<<<<<< HEAD
             this.T_pic.Location = new System.Drawing.Point(598, 65);
+=======
+            this.T_pic.Location = new System.Drawing.Point(603, 12);
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.T_pic.Name = "T_pic";
             this.T_pic.Size = new System.Drawing.Size(649, 674);
             this.T_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.T_pic.TabIndex = 34;
             this.T_pic.TabStop = false;
             // 
+<<<<<<< HEAD
             // TransactionMenu_Button
             // 
             this.TransactionMenu_Button.Location = new System.Drawing.Point(12, 701);
@@ -446,13 +470,19 @@
             this.TransactionMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.TransactionMenu_Button.Values.Text = "Transaction Menu";
             // 
+=======
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             // WithdrawForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1276, 789);
             this.Controls.Add(this.TransactionMenu_Button);
+=======
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+>>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Controls.Add(this.T_pic);
             this.Controls.Add(this.Account_Number_Label);
             this.Controls.Add(this.Account_Number_TextBox);
