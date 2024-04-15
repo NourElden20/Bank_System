@@ -190,7 +190,7 @@
             this.Client_Details_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Client_Details_Label.AutoSize = true;
             this.Client_Details_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Details_Label.Location = new System.Drawing.Point(161, 179);
+            this.Client_Details_Label.Location = new System.Drawing.Point(161, 184);
             this.Client_Details_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Client_Details_Label.Name = "Client_Details_Label";
             this.Client_Details_Label.Size = new System.Drawing.Size(201, 36);

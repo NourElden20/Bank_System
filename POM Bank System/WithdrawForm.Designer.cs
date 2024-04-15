@@ -50,11 +50,8 @@
             this.Withdraw_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.NewBalance_Label = new System.Windows.Forms.Label();
             this.NewBalance_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.T_pic = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
             this.TransactionMenu_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-=======
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
+            this.T_pic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.T_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,11 +102,7 @@
             // 
             // Account_Number_TextBox
             // 
-<<<<<<< HEAD
             this.Account_Number_TextBox.Location = new System.Drawing.Point(291, 65);
-=======
-            this.Account_Number_TextBox.Location = new System.Drawing.Point(296, 217);
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Account_Number_TextBox.Name = "Account_Number_TextBox";
             this.Account_Number_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_TextBox.TabIndex = 44;
@@ -118,11 +111,7 @@
             // 
             this.Account_Number_Label.AutoSize = true;
             this.Account_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.Account_Number_Label.Location = new System.Drawing.Point(73, 65);
-=======
-            this.Account_Number_Label.Location = new System.Drawing.Point(78, 218);
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Account_Number_Label.Name = "Account_Number_Label";
             this.Account_Number_Label.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_Label.TabIndex = 25;
@@ -130,7 +119,7 @@
             // 
             // Enter_AccNumber_Button
             // 
-            this.Enter_AccNumber_Button.Location = new System.Drawing.Point(164, 89);
+            this.Enter_AccNumber_Button.Location = new System.Drawing.Point(164, 102);
             this.Enter_AccNumber_Button.Name = "Enter_AccNumber_Button";
             this.Enter_AccNumber_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Enter_AccNumber_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -190,11 +179,7 @@
             // 
             this.Account_Number_DetailsLabel.AutoSize = true;
             this.Account_Number_DetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(73, 245);
-=======
-            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(78, 39);
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
+            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(75, 214);
             this.Account_Number_DetailsLabel.Name = "Account_Number_DetailsLabel";
             this.Account_Number_DetailsLabel.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_DetailsLabel.TabIndex = 25;
@@ -205,7 +190,7 @@
             this.Client_Details_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Client_Details_Label.AutoSize = true;
             this.Client_Details_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Details_Label.Location = new System.Drawing.Point(166, 152);
+            this.Client_Details_Label.Location = new System.Drawing.Point(168, 162);
             this.Client_Details_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Client_Details_Label.Name = "Client_Details_Label";
             this.Client_Details_Label.Size = new System.Drawing.Size(206, 31);
@@ -254,11 +239,7 @@
             // 
             // Account_Number_DetailsTextBox
             // 
-<<<<<<< HEAD
-            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(291, 244);
-=======
-            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(296, 39);
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
+            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(296, 214);
             this.Account_Number_DetailsTextBox.Name = "Account_Number_DetailsTextBox";
             this.Account_Number_DetailsTextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_DetailsTextBox.TabIndex = 44;
@@ -296,7 +277,7 @@
             this.Withdrawing_Title_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Withdrawing_Title_Label.AutoSize = true;
             this.Withdrawing_Title_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Withdrawing_Title_Label.Location = new System.Drawing.Point(176, 447);
+            this.Withdrawing_Title_Label.Location = new System.Drawing.Point(168, 449);
             this.Withdrawing_Title_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Withdrawing_Title_Label.Name = "Withdrawing_Title_Label";
             this.Withdrawing_Title_Label.Size = new System.Drawing.Size(191, 31);
@@ -322,7 +303,7 @@
             // 
             // Withdraw_Button
             // 
-            this.Withdraw_Button.Location = new System.Drawing.Point(174, 548);
+            this.Withdraw_Button.Location = new System.Drawing.Point(164, 547);
             this.Withdraw_Button.Name = "Withdraw_Button";
             this.Withdraw_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Withdraw_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -395,21 +376,6 @@
             this.NewBalance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.NewBalance_TextBox.TabIndex = 50;
             // 
-            // T_pic
-            // 
-            this.T_pic.Image = global::Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
-<<<<<<< HEAD
-            this.T_pic.Location = new System.Drawing.Point(598, 65);
-=======
-            this.T_pic.Location = new System.Drawing.Point(603, 12);
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
-            this.T_pic.Name = "T_pic";
-            this.T_pic.Size = new System.Drawing.Size(649, 674);
-            this.T_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.T_pic.TabIndex = 34;
-            this.T_pic.TabStop = false;
-            // 
-<<<<<<< HEAD
             // TransactionMenu_Button
             // 
             this.TransactionMenu_Button.Location = new System.Drawing.Point(12, 701);
@@ -470,19 +436,23 @@
             this.TransactionMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.TransactionMenu_Button.Values.Text = "Transaction Menu";
             // 
-=======
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
+            // T_pic
+            // 
+            this.T_pic.Image = global::Bank_System.Properties.Resources._12083339_Wavy_Bus_17_Single_02;
+            this.T_pic.Location = new System.Drawing.Point(598, 65);
+            this.T_pic.Name = "T_pic";
+            this.T_pic.Size = new System.Drawing.Size(649, 674);
+            this.T_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T_pic.TabIndex = 34;
+            this.T_pic.TabStop = false;
+            // 
             // WithdrawForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1276, 789);
             this.Controls.Add(this.TransactionMenu_Button);
-=======
-            this.ClientSize = new System.Drawing.Size(1264, 681);
->>>>>>> 81cb987acb821c43787499ceedfea97f139aa23e
             this.Controls.Add(this.T_pic);
             this.Controls.Add(this.Account_Number_Label);
             this.Controls.Add(this.Account_Number_TextBox);
