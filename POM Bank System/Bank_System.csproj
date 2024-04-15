@@ -74,6 +74,24 @@
     <Compile Include="ClientListForm.Designer.cs">
       <DependentUpon>ClientListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteClientForm.Designer.cs">
+      <DependentUpon>DeleteClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepositForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositForm.Designer.cs">
+      <DependentUpon>DepositForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindClientForm.Designer.cs">
+      <DependentUpon>FindClientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IMidUser.cs" />
     <Compile Include="Interfaces\IUser.cs" />
@@ -115,6 +133,12 @@
     <Compile Include="WithdrawForm.Designer.cs">
       <DependentUpon>WithdrawForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DepositForm.resx">
+      <DependentUpon>DepositForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindClientForm.resx">
+      <DependentUpon>FindClientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
