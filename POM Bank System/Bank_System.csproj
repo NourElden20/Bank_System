@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,6 +79,24 @@
     </Compile>
     <Compile Include="ClientListForm.Designer.cs">
       <DependentUpon>ClientListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteClientForm.Designer.cs">
+      <DependentUpon>DeleteClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepositForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositForm.Designer.cs">
+      <DependentUpon>DepositForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindClientForm.Designer.cs">
+      <DependentUpon>FindClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IMidUser.cs" />
@@ -132,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientListForm.resx">
       <DependentUpon>ClientListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositForm.resx">
+      <DependentUpon>DepositForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindClientForm.resx">
+      <DependentUpon>FindClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
