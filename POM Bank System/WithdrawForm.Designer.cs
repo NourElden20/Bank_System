@@ -241,6 +241,7 @@
             // 
             this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(296, 214);
             this.Account_Number_DetailsTextBox.Name = "Account_Number_DetailsTextBox";
+            this.Account_Number_DetailsTextBox.ReadOnly = true;
             this.Account_Number_DetailsTextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_DetailsTextBox.TabIndex = 44;
             // 
@@ -248,6 +249,7 @@
             // 
             this.PINCode_TextBox.Location = new System.Drawing.Point(296, 263);
             this.PINCode_TextBox.Name = "PINCode_TextBox";
+            this.PINCode_TextBox.ReadOnly = true;
             this.PINCode_TextBox.Size = new System.Drawing.Size(193, 23);
             this.PINCode_TextBox.TabIndex = 46;
             // 
@@ -255,6 +257,7 @@
             // 
             this.Client_Name_TextBox.Location = new System.Drawing.Point(296, 311);
             this.Client_Name_TextBox.Name = "Client_Name_TextBox";
+            this.Client_Name_TextBox.ReadOnly = true;
             this.Client_Name_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Client_Name_TextBox.TabIndex = 48;
             // 
@@ -262,6 +265,7 @@
             // 
             this.Client_Phone_TextBox.Location = new System.Drawing.Point(296, 356);
             this.Client_Phone_TextBox.Name = "Client_Phone_TextBox";
+            this.Client_Phone_TextBox.ReadOnly = true;
             this.Client_Phone_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Client_Phone_TextBox.TabIndex = 47;
             // 
@@ -269,6 +273,7 @@
             // 
             this.Account_Balance_TextBox.Location = new System.Drawing.Point(296, 405);
             this.Account_Balance_TextBox.Name = "Account_Balance_TextBox";
+            this.Account_Balance_TextBox.ReadOnly = true;
             this.Account_Balance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Balance_TextBox.TabIndex = 45;
             // 

@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>C:\Users\ziad\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>C:\Users\ziad\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>C:\Users\ziad\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>C:\Users\ziad\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>D:\New folder (4)\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>C:\Users\ziad\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,6 +86,12 @@
     <Compile Include="DeleteClientForm.Designer.cs">
       <DependentUpon>DeleteClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteUserForm.Designer.cs">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DepositForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="FindClientForm.Designer.cs">
       <DependentUpon>FindClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindUserForm.Designer.cs">
+      <DependentUpon>FindUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IMidUser.cs" />
@@ -119,6 +131,12 @@
     <Compile Include="NewClientForm.Designer.cs">
       <DependentUpon>NewClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransactionsForm.cs">
@@ -126,6 +144,12 @@
     </Compile>
     <Compile Include="TransactionsForm.Designer.cs">
       <DependentUpon>TransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedClientForm.Designer.cs">
+      <DependentUpon>UpdatedClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
@@ -151,17 +175,32 @@
     <EmbeddedResource Include="ClientListForm.resx">
       <DependentUpon>ClientListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteClientForm.resx">
+      <DependentUpon>DeleteClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUserForm.resx">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DepositForm.resx">
       <DependentUpon>DepositForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindClientForm.resx">
       <DependentUpon>FindClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindUserForm.resx">
+      <DependentUpon>FindUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewClientForm.resx">
+      <DependentUpon>NewClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,6 +214,9 @@
     </Compile>
     <EmbeddedResource Include="TransactionsForm.resx">
       <DependentUpon>TransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedClientForm.resx">
+      <DependentUpon>UpdatedClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
