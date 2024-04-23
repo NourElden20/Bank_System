@@ -11,5 +11,6 @@ namespace Bank_System
         void AddNewUser();
         void DeleteUser();
         void FindUser();
+        void ListUsers();
     } 
 }

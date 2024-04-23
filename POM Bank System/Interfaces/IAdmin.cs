@@ -8,6 +8,6 @@ namespace Bank_System
 {
     internal interface IAdmin:IMidUser,IUser
     {
-        void ManageUsers();
+       
     }
 }
