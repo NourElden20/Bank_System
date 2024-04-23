@@ -16,5 +16,15 @@ namespace Bank_System
         {
             InitializeComponent();
         }
+
+        private void no_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            GrpBox_UserLevel.Visible = true;
+        }
+
+        private void yes_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            GrpBox_UserLevel.Visible = false;
+        }
     }
 }

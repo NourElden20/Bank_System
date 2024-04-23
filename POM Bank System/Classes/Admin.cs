@@ -8,8 +8,9 @@ namespace Bank_System.Classes
 {
     public class Admin : User,IAdmin
     {
+        const string Path = @"Users.txt";
        
-      //User operations
+        //User operations
         public void AddNewUser()
         {
             throw new NotImplementedException();
