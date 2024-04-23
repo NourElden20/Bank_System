@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_System
 {
-    internal interface IMidUser :IUser
+    internal interface IMidUser 
     {
         void AddNewUser();
         void DeleteUser();

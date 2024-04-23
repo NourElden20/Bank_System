@@ -110,7 +110,6 @@
     <Compile Include="User Forms\FindUserForm.Designer.cs">
       <DependentUpon>FindUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IAdmin.cs" />
     <Compile Include="Interfaces\IMidUser.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="LoginForm.cs">

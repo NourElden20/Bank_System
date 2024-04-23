@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.username_TextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.username_Label = new System.Windows.Forms.Label();
             this.Enter_username_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.username_DetailsLabel = new System.Windows.Forms.Label();
             this.User_Details_Label = new System.Windows.Forms.Label();
@@ -90,26 +88,9 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // username_TextBox
-            // 
-            this.username_TextBox.Location = new System.Drawing.Point(291, 67);
-            this.username_TextBox.Name = "username_TextBox";
-            this.username_TextBox.Size = new System.Drawing.Size(193, 23);
-            this.username_TextBox.TabIndex = 44;
-            // 
-            // username_Label
-            // 
-            this.username_Label.AutoSize = true;
-            this.username_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_Label.Location = new System.Drawing.Point(70, 68);
-            this.username_Label.Name = "username_Label";
-            this.username_Label.Size = new System.Drawing.Size(99, 22);
-            this.username_Label.TabIndex = 25;
-            this.username_Label.Text = "username :";
-            // 
             // Enter_username_Button
             // 
-            this.Enter_username_Button.Location = new System.Drawing.Point(159, 133);
+            this.Enter_username_Button.Location = new System.Drawing.Point(150, 383);
             this.Enter_username_Button.Name = "Enter_username_Button";
             this.Enter_username_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Enter_username_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -169,7 +150,7 @@
             // 
             this.username_DetailsLabel.AutoSize = true;
             this.username_DetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_DetailsLabel.Location = new System.Drawing.Point(70, 297);
+            this.username_DetailsLabel.Location = new System.Drawing.Point(70, 148);
             this.username_DetailsLabel.Name = "username_DetailsLabel";
             this.username_DetailsLabel.Size = new System.Drawing.Size(102, 22);
             this.username_DetailsLabel.TabIndex = 25;
@@ -180,7 +161,7 @@
             this.User_Details_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.User_Details_Label.AutoSize = true;
             this.User_Details_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User_Details_Label.Location = new System.Drawing.Point(167, 216);
+            this.User_Details_Label.Location = new System.Drawing.Point(167, 67);
             this.User_Details_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.User_Details_Label.Name = "User_Details_Label";
             this.User_Details_Label.Size = new System.Drawing.Size(186, 36);
@@ -191,7 +172,7 @@
             // 
             this.password_Label.AutoSize = true;
             this.password_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_Label.Location = new System.Drawing.Point(70, 369);
+            this.password_Label.Location = new System.Drawing.Point(70, 220);
             this.password_Label.Name = "password_Label";
             this.password_Label.Size = new System.Drawing.Size(99, 22);
             this.password_Label.TabIndex = 26;
@@ -201,7 +182,7 @@
             // 
             this.permissions_Label.AutoSize = true;
             this.permissions_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.permissions_Label.Location = new System.Drawing.Point(70, 438);
+            this.permissions_Label.Location = new System.Drawing.Point(70, 289);
             this.permissions_Label.Name = "permissions_Label";
             this.permissions_Label.Size = new System.Drawing.Size(117, 22);
             this.permissions_Label.TabIndex = 25;
@@ -209,7 +190,7 @@
             // 
             // username_DetailsTextBox
             // 
-            this.username_DetailsTextBox.Location = new System.Drawing.Point(291, 297);
+            this.username_DetailsTextBox.Location = new System.Drawing.Point(291, 148);
             this.username_DetailsTextBox.Name = "username_DetailsTextBox";
             this.username_DetailsTextBox.ReadOnly = true;
             this.username_DetailsTextBox.Size = new System.Drawing.Size(193, 23);
@@ -217,7 +198,7 @@
             // 
             // password_TextBox
             // 
-            this.password_TextBox.Location = new System.Drawing.Point(291, 368);
+            this.password_TextBox.Location = new System.Drawing.Point(291, 219);
             this.password_TextBox.Name = "password_TextBox";
             this.password_TextBox.ReadOnly = true;
             this.password_TextBox.Size = new System.Drawing.Size(193, 23);
@@ -225,7 +206,7 @@
             // 
             // permissions_TextBox
             // 
-            this.permissions_TextBox.Location = new System.Drawing.Point(291, 438);
+            this.permissions_TextBox.Location = new System.Drawing.Point(291, 289);
             this.permissions_TextBox.Name = "permissions_TextBox";
             this.permissions_TextBox.ReadOnly = true;
             this.permissions_TextBox.Size = new System.Drawing.Size(193, 23);
@@ -309,8 +290,6 @@
             this.ClientSize = new System.Drawing.Size(1276, 616);
             this.Controls.Add(this.UsersMenu_Button);
             this.Controls.Add(this.MM_pic);
-            this.Controls.Add(this.username_Label);
-            this.Controls.Add(this.username_TextBox);
             this.Controls.Add(this.User_Details_Label);
             this.Controls.Add(this.password_Label);
             this.Controls.Add(this.permissions_Label);
@@ -335,8 +314,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.Windows.Forms.PictureBox MM_pic;
         private System.Windows.Forms.Label User_Details_Label;
-        public System.Windows.Forms.Label username_Label;
-        public ComponentFactory.Krypton.Toolkit.KryptonTextBox username_TextBox;
         public ComponentFactory.Krypton.Toolkit.KryptonButton Enter_username_Button;
         public System.Windows.Forms.Label username_DetailsLabel;
         public System.Windows.Forms.Label password_Label;

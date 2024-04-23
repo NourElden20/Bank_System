@@ -9,8 +9,13 @@ namespace Bank_System
 {
     public abstract class User 
     {
-        int id;
-        string name;       
+        public static int id = 1;
+
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Permission { get; set; }
+
+
     }
 
     

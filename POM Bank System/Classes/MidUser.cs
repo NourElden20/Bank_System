@@ -6,37 +6,15 @@ using System.Threading.Tasks;
 
 namespace Bank_System.Classes
 {
-    public class MidUser : User, IMidUser
-    {
-        public void AddNewClient()
-        {
-            throw new NotImplementedException();
-        }
-
+    public class MidUser : LUser, IMidUser
+    {     
         public void AddNewUser() { }
 
-        public void DeleteClient()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteUser() { }
-
-        public void FindClient()
-        {
-            throw new NotImplementedException();
-        }
+        public void ListUsers() { }
 
         public void FindUser() { }
 
-        public void ShowClientList()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateClientInfo()
-        {
-            throw new NotImplementedException();
-        }
+        public void DeleteUser() { }
+              
     }
 }
