@@ -8,7 +8,6 @@ namespace Bank_System.Classes
 {
     public class Admin : MidUser 
     {
-        const string Path = @"Users.txt";
        
        
       

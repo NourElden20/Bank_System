@@ -7,10 +7,13 @@ using System.IO;
 
 namespace Bank_System
 {
-    public abstract class User 
+    public class User 
     {
+        const string Path = @"Users.txt";
+
         public static int id = 1;
 
+        public static List<User> UsersList = new List<User>();
         public string Username { get; set; }
         public string Password { get; set; }
         public string Permission { get; set; }
