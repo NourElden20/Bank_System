@@ -71,6 +71,7 @@
     <Compile Include="Classes\Client.cs" />
     <Compile Include="Classes\LUser.cs" />
     <Compile Include="Classes\MidUser.cs" />
+    <Compile Include="Classes\MyFile.cs" />
     <Compile Include="Classes\Program.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\WorkingArea.cs" />
