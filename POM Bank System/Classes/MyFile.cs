@@ -19,7 +19,7 @@ namespace Bank_System.Classes
             streamWriter.Close();
             fileStream.Close();
         }
-        public static void DeleteRecord(List<User> list, User user, string Path)// for delete book in specific file
+        public static void DeleteRecord( User user, string Path)// for delete book in specific file
         {
             bool flag = false;
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.ReadWrite);
@@ -42,15 +42,15 @@ namespace Bank_System.Classes
 
             sr.Close();
             myFile.Close();
-            if(flag)UpdateRecord(list, user, Path, SecondaryKey);
+            if(flag)UpdateRecord( user, Path, SecondaryKey);
         }
-        public static void UpdateRecord(List<User> list, User user, string Path, string SecondaryKey="")// for Update book in specific file
+        public static void UpdateRecord( User user, string Path, string SecondaryKey="")// for Update book in specific file
         {
             bool flag = false;
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(myFile);
             string record;
-//Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
+            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
@@ -75,7 +75,7 @@ namespace Bank_System.Classes
             myFile.Close();
                
             
-            CreateFile(list,Path);
+            CreateFile(Path);
 
           
         }
@@ -87,7 +87,7 @@ namespace Bank_System.Classes
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
-                if (Fields[0].Trim() == id.ToString().Trim())
+                if (Fields[0] == id.ToString())
                 {
                     return true;
                 }
@@ -114,11 +114,11 @@ namespace Bank_System.Classes
             return Place.Text;
 
         }
-        public static void CreateFile(List<User> list,string Path)
+        public static void CreateFile(string Path)
         {
             FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
-            foreach (User user in list)
+            foreach (User user in UserOperations.UsersList)
             {
                 if(user.ID.Trim() != "*")
                 streamWriter.WriteLine(User.id + "|" + user.Username + "|" + user.Password + "|" + user.Permission);

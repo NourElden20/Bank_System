@@ -9,10 +9,9 @@ namespace Bank_System
 {
     public class User 
     {
-        const string Path = @"Users.txt";
 
         public static int id = 1;
-        public static List<User> UsersList = new List<User>();
+       
 
         public string ID = (id++).ToString();
         public string Username { get; set; }
@@ -33,7 +32,9 @@ namespace Bank_System
         }
         public User()
         {
-            
+            Username = string.Empty; 
+            Password = string.Empty;
+            Permission = string.Empty;
         }
     }
 
