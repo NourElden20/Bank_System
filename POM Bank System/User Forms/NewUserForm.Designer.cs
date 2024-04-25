@@ -45,8 +45,8 @@
             this.Add_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.UsersMenu_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.RBtn_MidLevel = new System.Windows.Forms.RadioButton();
+            this.RBtn_LowLevel = new System.Windows.Forms.RadioButton();
             this.GrpBox_UserLevel = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.U_pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox_UserLevel)).BeginInit();
@@ -323,6 +323,7 @@
             this.Add_Button.StateTracking.Border.Width = 1;
             this.Add_Button.TabIndex = 53;
             this.Add_Button.Values.Text = "Add";
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // UsersMenu_Button
             // 
@@ -383,6 +384,7 @@
             this.UsersMenu_Button.Values.Image = global::Bank_System.Properties.Resources.arrow_24_xxl3;
             this.UsersMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.UsersMenu_Button.Values.Text = "Users Menu";
+            this.UsersMenu_Button.Click += new System.EventHandler(this.UsersMenu_Button_Click);
             // 
             // label1
             // 
@@ -394,40 +396,40 @@
             this.label1.TabIndex = 55;
             this.label1.Text = "Type of access : ";
             // 
-            // radioButton1
+            // RBtn_MidLevel
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(197, 8);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(108, 17);
-            this.radioButton1.TabIndex = 56;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mid Level user";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RBtn_MidLevel.AutoSize = true;
+            this.RBtn_MidLevel.Location = new System.Drawing.Point(197, 8);
+            this.RBtn_MidLevel.Name = "RBtn_MidLevel";
+            this.RBtn_MidLevel.Size = new System.Drawing.Size(110, 17);
+            this.RBtn_MidLevel.TabIndex = 56;
+            this.RBtn_MidLevel.TabStop = true;
+            this.RBtn_MidLevel.Text = "Mid Level User";
+            this.RBtn_MidLevel.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RBtn_LowLevel
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(353, 10);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(111, 17);
-            this.radioButton2.TabIndex = 57;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Low Level user";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RBtn_LowLevel.AutoSize = true;
+            this.RBtn_LowLevel.Location = new System.Drawing.Point(353, 10);
+            this.RBtn_LowLevel.Name = "RBtn_LowLevel";
+            this.RBtn_LowLevel.Size = new System.Drawing.Size(113, 17);
+            this.RBtn_LowLevel.TabIndex = 57;
+            this.RBtn_LowLevel.TabStop = true;
+            this.RBtn_LowLevel.Text = "Low Level User";
+            this.RBtn_LowLevel.UseVisualStyleBackColor = true;
             // 
             // GrpBox_UserLevel
             // 
             this.GrpBox_UserLevel.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ItalicPanel;
             this.GrpBox_UserLevel.CaptionVisible = false;
-            this.GrpBox_UserLevel.Location = new System.Drawing.Point(16, 334);
+            this.GrpBox_UserLevel.Location = new System.Drawing.Point(16, 344);
             this.GrpBox_UserLevel.Name = "GrpBox_UserLevel";
             this.GrpBox_UserLevel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             // 
             // GrpBox_UserLevel.Panel
             // 
-            this.GrpBox_UserLevel.Panel.Controls.Add(this.radioButton1);
-            this.GrpBox_UserLevel.Panel.Controls.Add(this.radioButton2);
+            this.GrpBox_UserLevel.Panel.Controls.Add(this.RBtn_MidLevel);
+            this.GrpBox_UserLevel.Panel.Controls.Add(this.RBtn_LowLevel);
             this.GrpBox_UserLevel.Panel.Controls.Add(this.label1);
             this.GrpBox_UserLevel.Size = new System.Drawing.Size(471, 37);
             this.GrpBox_UserLevel.TabIndex = 58;
@@ -490,8 +492,8 @@
         public ComponentFactory.Krypton.Toolkit.KryptonButton Add_Button;
         public ComponentFactory.Krypton.Toolkit.KryptonButton UsersMenu_Button;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton RBtn_MidLevel;
+        private System.Windows.Forms.RadioButton RBtn_LowLevel;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox GrpBox_UserLevel;
     }
 }

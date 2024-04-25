@@ -10,10 +10,10 @@ namespace Bank_System
     public class User 
     {
 
-        public static int id = 1;
+        public static int id ;
        
 
-        public string ID = (id++).ToString();
+        public string ID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Permission { get; set; }

@@ -181,6 +181,7 @@
             this.Login_Button.StateTracking.Border.Width = 1;
             this.Login_Button.TabIndex = 24;
             this.Login_Button.Values.Text = "Log in";
+            this.Login_Button.Click += new System.EventHandler(this.Login_Button_Click);
             // 
             // Username_Label
             // 

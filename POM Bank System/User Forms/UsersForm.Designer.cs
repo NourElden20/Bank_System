@@ -199,6 +199,7 @@
             this.ListUsers_Button.StateTracking.Border.Width = 1;
             this.ListUsers_Button.TabIndex = 38;
             this.ListUsers_Button.Values.Text = "List Users";
+            this.ListUsers_Button.Click += new System.EventHandler(this.ListUsers_Button_Click);
             // 
             // AddNewUser_Button
             // 
@@ -257,6 +258,7 @@
             this.AddNewUser_Button.StateTracking.Border.Width = 1;
             this.AddNewUser_Button.TabIndex = 39;
             this.AddNewUser_Button.Values.Text = "Add New User";
+            this.AddNewUser_Button.Click += new System.EventHandler(this.AddNewUser_Button_Click);
             // 
             // DeleteUser_Button
             // 
@@ -375,6 +377,7 @@
             this.MainMenu_Button.Values.Image = global::Bank_System.Properties.Resources.arrow_24_xxl3;
             this.MainMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MainMenu_Button.Values.Text = "Main Menu";
+            this.MainMenu_Button.Click += new System.EventHandler(this.MainMenu_Button_Click);
             // 
             // U_pic
             // 
@@ -405,8 +408,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POM Bank - Users";
-            this.Load += new System.EventHandler(this.UsersForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.U_pic)).EndInit();
             this.ResumeLayout(false);
 
         }
