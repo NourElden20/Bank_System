@@ -88,9 +88,12 @@ namespace Bank_System.Classes
 
         private string ConvertClientDataToRecord(clsClient Client, string Delim = "#//#")
         {
-            string Record = Client.AccountID + Delim
-               + Client.PINCode + Delim + Client.Name + Delim
-                + Client.PhoneNumber + Delim + Client.Balance.ToString();
+            string Record = 
+                Client.AccountID + Delim +
+                Client.PINCode + Delim +
+                Client.Name + Delim +
+                Client.PhoneNumber + Delim +
+                Client.Balance.ToString();
 
             return Record;
         }

@@ -30,7 +30,7 @@ namespace Bank_System.Classes
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
-                if(User.id.Equals(Fields[0]))
+                if(user.ID.Equals(Fields[0]))
                 {
                     SecondaryKey = Fields[0] + Fields[1];
                     user.ID = " * ";                       
@@ -54,8 +54,8 @@ namespace Bank_System.Classes
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
-                User user2 = new User(Fields[1], Fields[2], Fields[3]);
-                user2.ID = Fields[0];
+                User user2 = new User(Fields.ToList());
+               
                 string SecondaryKey2 = user2.ID + user2.Username;
                 if (SecondaryKey == SecondaryKey2)
                 {
@@ -79,7 +79,7 @@ namespace Bank_System.Classes
 
           
         }
-        public static bool Search(int id,string Path)
+        private static bool Search(int id,string Path)
         {
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(myFile);
@@ -96,13 +96,13 @@ namespace Bank_System.Classes
             myFile.Close();
             return false;
         }
-        public static string ShowFile(string Path, TextBox Place)
+        public static string LoadFile(string Path, TextBox Place)
         {
-            Place.Text = "ID\r\t|\r\tName\r\t|\r\tAuthor\r\t|\r\tQuantity\r\t|\r\tPrice\r|\r\tYear\r\n\r\n";
+            Place.Text = "ID\r\t|\r\tUsername\r\t|\rPassword\r\t|\rPermission\r\n\r\n";
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(myFile);
             string record;
-            //Example of book attributes : ID 0 | Name 1 | Author 2 | Quantity 3 | Price 4 | Year 5 (As Written in file)
+            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
@@ -114,7 +114,7 @@ namespace Bank_System.Classes
             return Place.Text;
 
         }
-        public static void CreateFile(string Path)
+        private static void CreateFile(string Path)
         {
             FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
@@ -126,8 +126,25 @@ namespace Bank_System.Classes
             streamWriter.Close();
             fileStream.Close();
         }
-       
 
+        public static void LoadUsersFromFileToList()
+        {
+            FileStream myFile = new FileStream(UserOperations.Path, FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(myFile);
+            string record;
+
+            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
+            while ((record = sr.ReadLine()) != null)
+            {
+                string[] Fields = record.Split('|');
+
+                User user = new User(Fields.ToList());
+
+                UserOperations.UsersList.Add(user);
+            }
+            sr.Close();
+            myFile.Close();
+        }
 
     }
 }

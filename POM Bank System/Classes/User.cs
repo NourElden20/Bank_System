@@ -24,6 +24,13 @@ namespace Bank_System
             this.Password = Password;
             this.Permission = Permission;
         }
+        public User(List<string> list)
+        {
+            this.ID         = list[0];
+            this.Username   = list[1];
+            this.Password   = list[2];
+            this.Permission = list[3];
+        }
         public User(User user)
         {
             Username =   user.Username;

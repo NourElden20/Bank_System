@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace Bank_System.Classes
 {
     public class UserOperations
     {
-        const string Path = @"Users.txt";
+        public const string Path = @"Users.txt";
         public static List<User> UsersList = new List<User>();
 
         public static void AddUser(User user)
@@ -29,6 +30,14 @@ namespace Bank_System.Classes
             MyFile.UpdateRecord(user, Path);
             UsersList.Add(user);
             MessageBox.Show("User Updated Successfully!", "Event!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static void ShowUsers(TextBox Holder)
+        {
+            MyFile.LoadFile(Path, Holder);
+        }
+        public static void LoadUsersFromFile(TextBox Holder)
+        {
+            MyFile.LoadUsersFromFileToList();
         }
     }
 }
