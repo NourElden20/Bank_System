@@ -17,5 +17,13 @@ namespace Bank_System
         {
             InitializeComponent();
         }
+
+        private void TransactionMenu_Button_Click(object sender, EventArgs e)
+        {
+            TransactionsForm form = new TransactionsForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

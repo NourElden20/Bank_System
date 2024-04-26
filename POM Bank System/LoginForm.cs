@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bank_System.Classes;
 using ComponentFactory.Krypton.Toolkit;
 namespace Bank_System
 {
@@ -15,6 +16,7 @@ namespace Bank_System
         public Login_Form()
         {
             InitializeComponent();
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,9 +27,10 @@ namespace Bank_System
         private void Login_Button_Click(object sender, EventArgs e)
         {
             
-            UsersForm form = new UsersForm();
+            MainMenuForm form = new MainMenuForm();
             this.Hide();
-            form.Show();
+            form.ShowDialog();
+            this.Close();
           
         }
     }

@@ -30,10 +30,10 @@ namespace Bank_System.Classes
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
-                if(user.ID.Equals(Fields[0]))
+                if(user.ID == Fields[0] )
                 {
                     SecondaryKey = Fields[0] + Fields[1];
-                    user.ID = " * ";                       
+                    user.ID = "*";                       
                     flag = true;
                     break;
                 }
@@ -119,9 +119,8 @@ namespace Bank_System.Classes
             FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
             foreach (User user in UserOperations.UsersList)
-            {
-                if(user.ID.Trim() != "*")
-                streamWriter.WriteLine(User.id + "|" + user.Username + "|" + user.Password + "|" + user.Permission);
+            {              
+                streamWriter.WriteLine(user.ID + "|" + user.Username + "|" + user.Password + "|" + user.Permission);
             }
             streamWriter.Close();
             fileStream.Close();
@@ -137,10 +136,12 @@ namespace Bank_System.Classes
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
+                if (Fields[0].Trim() != "*") // We don't add deleted users to list
+                {
+                    User user = new User(Fields.ToList());
 
-                User user = new User(Fields.ToList());
-
-                UserOperations.UsersList.Add(user);
+                    UserOperations.UsersList.Add(user);
+                }
             }
             sr.Close();
             myFile.Close();

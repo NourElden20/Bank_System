@@ -86,10 +86,7 @@
     <Compile Include="BalanceListForm.Designer.cs">
       <DependentUpon>BalanceListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Client.cs" />
-    <Compile Include="Classes\LUser.cs" />
-    <Compile Include="Classes\MidUser.cs" />
     <Compile Include="Classes\MyFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Classes\User.cs" />
@@ -125,14 +122,6 @@
     <Compile Include="Client Forms\FindClientForm.Designer.cs">
       <DependentUpon>FindClientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Forms\FindUserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User Forms\FindUserForm.Designer.cs">
-      <DependentUpon>FindUserForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces\IMidUser.cs" />
-    <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +186,9 @@
     <EmbeddedResource Include="Client Forms\DeleteClientForm.resx">
       <DependentUpon>DeleteClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client Forms\NewClientForm.resx">
+      <DependentUpon>NewClientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Forms\DeleteUserForm.resx">
       <DependentUpon>DeleteUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client Forms\FindClientForm.resx">
       <DependentUpon>FindClientForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Forms\FindUserForm.resx">
-      <DependentUpon>FindUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

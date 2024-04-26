@@ -389,6 +389,7 @@
             this.MainMenu_Button.Values.Image = global::Bank_System.Properties.Resources.arrow_24_xxl3;
             this.MainMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MainMenu_Button.Values.Text = "Main Menu";
+            this.MainMenu_Button.Click += new System.EventHandler(this.MainMenu_Button_Click);
             // 
             // MM_pic
             // 

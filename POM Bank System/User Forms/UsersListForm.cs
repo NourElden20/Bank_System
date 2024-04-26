@@ -16,12 +16,14 @@ namespace Bank_System
         public UsersListForm()
         {
             InitializeComponent();
+            userBindingSource.Clear();
+            foreach (var user in UserOperations.UsersList)
+                userBindingSource.Add(user);
         }
 
         private void UsersListForm_Load(object sender, EventArgs e)
         {
-            foreach(var user in UserOperations.UsersList)
-            userBindingSource.Add(user);
+            
         }
 
        

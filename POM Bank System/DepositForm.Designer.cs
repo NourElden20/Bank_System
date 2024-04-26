@@ -445,6 +445,7 @@
             this.TransactionMenu_Button.Values.Image = global::Bank_System.Properties.Resources.arrow_24_xxl3;
             this.TransactionMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.TransactionMenu_Button.Values.Text = "Transaction Menu";
+            this.TransactionMenu_Button.Click += new System.EventHandler(this.TransactionMenu_Button_Click);
             // 
             // DepositForm
             // 

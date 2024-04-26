@@ -140,6 +140,7 @@
             this.ShowBalance_Button.StateTracking.Border.Width = 1;
             this.ShowBalance_Button.TabIndex = 35;
             this.ShowBalance_Button.Values.Text = "Show Balance";
+            this.ShowBalance_Button.Click += new System.EventHandler(this.ShowBalance_Button_Click);
             // 
             // Deposit_Button
             // 
@@ -198,6 +199,7 @@
             this.Deposit_Button.StateTracking.Border.Width = 1;
             this.Deposit_Button.TabIndex = 36;
             this.Deposit_Button.Values.Text = "Deposit";
+            this.Deposit_Button.Click += new System.EventHandler(this.Deposit_Button_Click);
             // 
             // Withdraw_Button
             // 
@@ -256,6 +258,7 @@
             this.Withdraw_Button.StateTracking.Border.Width = 1;
             this.Withdraw_Button.TabIndex = 37;
             this.Withdraw_Button.Values.Text = "Withdraw";
+            this.Withdraw_Button.Click += new System.EventHandler(this.Withdraw_Button_Click);
             // 
             // MainMenu_Button
             // 
@@ -316,6 +319,7 @@
             this.MainMenu_Button.Values.Image = global::Bank_System.Properties.Resources.arrow_24_xxl3;
             this.MainMenu_Button.Values.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MainMenu_Button.Values.Text = "Main Menu";
+            this.MainMenu_Button.Click += new System.EventHandler(this.MainMenu_Button_Click);
             // 
             // T_pic
             // 

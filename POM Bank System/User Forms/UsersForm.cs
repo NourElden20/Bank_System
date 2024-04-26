@@ -17,6 +17,7 @@ namespace Bank_System
         public UsersForm()
         {
             InitializeComponent();
+            UserOperations.UsersList.Clear();
             UserOperations.LoadUsersFromFile();
             User.id = int.Parse(UserOperations.UsersList.Last().ID);
             User.id++;
@@ -33,9 +34,9 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            Login_Form loginForm = new Login_Form();
+            MainMenuForm form = new MainMenuForm();
             this.Hide();
-            loginForm.ShowDialog();
+            form.ShowDialog();
             this.Close();
         }
 
@@ -46,5 +47,16 @@ namespace Bank_System
             form.ShowDialog();
             this.Close();
         }
+
+        private void DeleteUser_Button_Click(object sender, EventArgs e)
+        {
+            DeleteUserForm form = new DeleteUserForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        
     }
 }
+

@@ -39,6 +39,7 @@
             this.ManageUsers_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Logout_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.MM_pic = new System.Windows.Forms.PictureBox();
+            this.Title_AddingUser_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MM_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +90,7 @@
             // 
             // ShowClientList_Button
             // 
-            this.ShowClientList_Button.Location = new System.Drawing.Point(319, 235);
+            this.ShowClientList_Button.Location = new System.Drawing.Point(318, 320);
             this.ShowClientList_Button.Name = "ShowClientList_Button";
             this.ShowClientList_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.ShowClientList_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -144,10 +145,11 @@
             this.ShowClientList_Button.StateTracking.Border.Width = 1;
             this.ShowClientList_Button.TabIndex = 25;
             this.ShowClientList_Button.Values.Text = "Show Client List";
+            this.ShowClientList_Button.Click += new System.EventHandler(this.ShowClientList_Button_Click);
             // 
             // AddNewClient_Button
             // 
-            this.AddNewClient_Button.Location = new System.Drawing.Point(12, 58);
+            this.AddNewClient_Button.Location = new System.Drawing.Point(11, 143);
             this.AddNewClient_Button.Name = "AddNewClient_Button";
             this.AddNewClient_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.AddNewClient_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -202,10 +204,11 @@
             this.AddNewClient_Button.StateTracking.Border.Width = 1;
             this.AddNewClient_Button.TabIndex = 34;
             this.AddNewClient_Button.Values.Text = "Add New Client";
+            this.AddNewClient_Button.Click += new System.EventHandler(this.AddNewClient_Button_Click);
             // 
             // DeleteClient_Button
             // 
-            this.DeleteClient_Button.Location = new System.Drawing.Point(319, 58);
+            this.DeleteClient_Button.Location = new System.Drawing.Point(318, 143);
             this.DeleteClient_Button.Name = "DeleteClient_Button";
             this.DeleteClient_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.DeleteClient_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -260,10 +263,11 @@
             this.DeleteClient_Button.StateTracking.Border.Width = 1;
             this.DeleteClient_Button.TabIndex = 35;
             this.DeleteClient_Button.Values.Text = "Delete Client";
+            this.DeleteClient_Button.Click += new System.EventHandler(this.DeleteClient_Button_Click);
             // 
             // UpdateClientInfo_Button
             // 
-            this.UpdateClientInfo_Button.Location = new System.Drawing.Point(319, 148);
+            this.UpdateClientInfo_Button.Location = new System.Drawing.Point(318, 233);
             this.UpdateClientInfo_Button.Name = "UpdateClientInfo_Button";
             this.UpdateClientInfo_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.UpdateClientInfo_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -318,10 +322,11 @@
             this.UpdateClientInfo_Button.StateTracking.Border.Width = 1;
             this.UpdateClientInfo_Button.TabIndex = 36;
             this.UpdateClientInfo_Button.Values.Text = "Update Client Info";
+            this.UpdateClientInfo_Button.Click += new System.EventHandler(this.UpdateClientInfo_Button_Click);
             // 
             // FindClient_Button
             // 
-            this.FindClient_Button.Location = new System.Drawing.Point(12, 235);
+            this.FindClient_Button.Location = new System.Drawing.Point(11, 320);
             this.FindClient_Button.Name = "FindClient_Button";
             this.FindClient_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.FindClient_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -376,10 +381,11 @@
             this.FindClient_Button.StateTracking.Border.Width = 1;
             this.FindClient_Button.TabIndex = 37;
             this.FindClient_Button.Values.Text = "Find Client";
+            this.FindClient_Button.Click += new System.EventHandler(this.FindClient_Button_Click);
             // 
             // Transations_Button
             // 
-            this.Transations_Button.Location = new System.Drawing.Point(12, 148);
+            this.Transations_Button.Location = new System.Drawing.Point(11, 233);
             this.Transations_Button.Name = "Transations_Button";
             this.Transations_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Transations_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -434,6 +440,7 @@
             this.Transations_Button.StateTracking.Border.Width = 1;
             this.Transations_Button.TabIndex = 38;
             this.Transations_Button.Values.Text = "Transactions";
+            this.Transations_Button.Click += new System.EventHandler(this.Transactions_Button_Click);
             // 
             // ManageUsers_Button
             // 
@@ -492,6 +499,7 @@
             this.ManageUsers_Button.StateTracking.Border.Width = 1;
             this.ManageUsers_Button.TabIndex = 39;
             this.ManageUsers_Button.Values.Text = "Manage Users";
+            this.ManageUsers_Button.Click += new System.EventHandler(this.ManageUsers_Button_Click);
             // 
             // Logout_Button
             // 
@@ -550,6 +558,7 @@
             this.Logout_Button.StateTracking.Border.Width = 1;
             this.Logout_Button.TabIndex = 40;
             this.Logout_Button.Values.Text = "Log Out";
+            this.Logout_Button.Click += new System.EventHandler(this.Logout_Button_Click);
             // 
             // MM_pic
             // 
@@ -561,12 +570,25 @@
             this.MM_pic.TabIndex = 33;
             this.MM_pic.TabStop = false;
             // 
+            // Title_AddingUser_Label
+            // 
+            this.Title_AddingUser_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
+            this.Title_AddingUser_Label.AutoSize = true;
+            this.Title_AddingUser_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title_AddingUser_Label.Location = new System.Drawing.Point(221, 36);
+            this.Title_AddingUser_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Title_AddingUser_Label.Name = "Title_AddingUser_Label";
+            this.Title_AddingUser_Label.Size = new System.Drawing.Size(164, 36);
+            this.Title_AddingUser_Label.TabIndex = 44;
+            this.Title_AddingUser_Label.Text = "Main Menu";
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.Title_AddingUser_Label);
             this.Controls.Add(this.Logout_Button);
             this.Controls.Add(this.ManageUsers_Button);
             this.Controls.Add(this.Transations_Button);
@@ -585,6 +607,7 @@
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MM_pic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -600,5 +623,6 @@
         public ComponentFactory.Krypton.Toolkit.KryptonButton Transations_Button;
         public ComponentFactory.Krypton.Toolkit.KryptonButton ManageUsers_Button;
         public ComponentFactory.Krypton.Toolkit.KryptonButton Logout_Button;
+        private System.Windows.Forms.Label Title_AddingUser_Label;
     }
 }

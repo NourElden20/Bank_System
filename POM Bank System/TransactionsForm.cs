@@ -21,5 +21,37 @@ namespace Bank_System
         {
 
         }
+
+        private void Deposit_Button_Click(object sender, EventArgs e)
+        {
+            DepositForm form = new DepositForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void Withdraw_Button_Click(object sender, EventArgs e)
+        {
+            WithdrawForm form = new WithdrawForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void ShowBalance_Button_Click(object sender, EventArgs e)
+        {
+            BalanceListForm form = new BalanceListForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void MainMenu_Button_Click(object sender, EventArgs e)
+        {
+            MainMenuForm form = new MainMenuForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

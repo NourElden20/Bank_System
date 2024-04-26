@@ -43,6 +43,7 @@ namespace Bank_System
             Password = string.Empty;
             Permission = string.Empty;
         }
+       
     }
 
     

@@ -52,17 +52,17 @@ namespace Bank_System
                     if (RBtn_MidLevel.Checked) user.Permission = "Mid-Level";
                     if (RBtn_LowLevel.Checked) user.Permission = "Low-Level";
                 }
+               UserOperations.AddUser(user);
             }        
-            UserOperations.AddUser(user);
         }
         private bool CheckIFFieldsEmpty()
         {
             if(username_TextBox.Text == string.Empty || Password_TextBox.Text == string.Empty || confirm_password_TextBox.Text == string.Empty)
             {
                 MessageBox.Show("Fill the fields","Error!",MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
     }
 }
