@@ -31,15 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.NOClient_Label = new System.Windows.Forms.Label();
             this.MainMenu_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ClientTable = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.AccountNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PinCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pINCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clsClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clsClientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ClientTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsClientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsClientBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -87,21 +90,10 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // NOClient_Label
-            // 
-            this.NOClient_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
-            this.NOClient_Label.AutoSize = true;
-            this.NOClient_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NOClient_Label.Location = new System.Drawing.Point(458, 607);
-            this.NOClient_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.NOClient_Label.Name = "NOClient_Label";
-            this.NOClient_Label.Size = new System.Drawing.Size(256, 25);
-            this.NOClient_Label.TabIndex = 51;
-            this.NOClient_Label.Text = "format-->NO.clients ://ex9";
-            // 
             // MainMenu_Button
             // 
-            this.MainMenu_Button.Location = new System.Drawing.Point(64, 584);
+            this.MainMenu_Button.Location = new System.Drawing.Point(96, 898);
+            this.MainMenu_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MainMenu_Button.Name = "MainMenu_Button";
             this.MainMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.MainMenu_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -115,7 +107,7 @@
             this.MainMenu_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.MainMenu_Button.OverrideDefault.Border.Rounding = 20;
             this.MainMenu_Button.OverrideDefault.Border.Width = 1;
-            this.MainMenu_Button.Size = new System.Drawing.Size(268, 79);
+            this.MainMenu_Button.Size = new System.Drawing.Size(402, 122);
             this.MainMenu_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.MainMenu_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.MainMenu_Button.StateCommon.Back.ColorAngle = 45F;
@@ -162,24 +154,28 @@
             // 
             // ClientTable
             // 
+            this.ClientTable.AutoGenerateColumns = false;
             this.ClientTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ClientTable.ColumnHeadersHeight = 80;
             this.ClientTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AccountNumber,
-            this.PinCode,
-            this.ClientName,
-            this.Phone,
-            this.Balance});
+            this.accountIDDataGridViewTextBoxColumn,
+            this.pINCodeDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.balanceDataGridViewTextBoxColumn});
+            this.ClientTable.DataSource = this.clsClientBindingSource;
             this.ClientTable.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Custom1;
             this.ClientTable.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
             this.ClientTable.GridStyles.StyleColumn = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.ClientTable.GridStyles.StyleDataCells = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.ClientTable.GridStyles.StyleRow = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.ClientTable.HideOuterBorders = true;
-            this.ClientTable.Location = new System.Drawing.Point(1, 18);
+            this.ClientTable.Location = new System.Drawing.Point(2, 28);
+            this.ClientTable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ClientTable.Name = "ClientTable";
             this.ClientTable.ReadOnly = true;
             this.ClientTable.RowHeadersVisible = false;
+            this.ClientTable.RowHeadersWidth = 62;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(165)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,7 +184,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.ClientTable.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ClientTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ClientTable.Size = new System.Drawing.Size(1263, 533);
+            this.ClientTable.Size = new System.Drawing.Size(1894, 820);
             this.ClientTable.StateCommon.Background.Color1 = System.Drawing.Color.Transparent;
             this.ClientTable.StateCommon.Background.Color2 = System.Drawing.Color.Transparent;
             this.ClientTable.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
@@ -208,66 +204,87 @@
             this.ClientTable.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.White;
             this.ClientTable.TabIndex = 49;
             // 
-            // AccountNumber
+            // accountIDDataGridViewTextBoxColumn
             // 
-            this.AccountNumber.HeaderText = "Account Number";
-            this.AccountNumber.Name = "AccountNumber";
-            this.AccountNumber.ReadOnly = true;
+            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
+            this.accountIDDataGridViewTextBoxColumn.HeaderText = "AccountID";
+            this.accountIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
+            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // PinCode
+            // pINCodeDataGridViewTextBoxColumn
             // 
-            this.PinCode.HeaderText = "Pin Code";
-            this.PinCode.Name = "PinCode";
-            this.PinCode.ReadOnly = true;
+            this.pINCodeDataGridViewTextBoxColumn.DataPropertyName = "PINCode";
+            this.pINCodeDataGridViewTextBoxColumn.HeaderText = "PINCode";
+            this.pINCodeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.pINCodeDataGridViewTextBoxColumn.Name = "pINCodeDataGridViewTextBoxColumn";
+            this.pINCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ClientName
+            // nameDataGridViewTextBoxColumn
             // 
-            this.ClientName.HeaderText = "Client Name";
-            this.ClientName.Name = "ClientName";
-            this.ClientName.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Phone
+            // phoneNumberDataGridViewTextBoxColumn
             // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Balance
+            // balanceDataGridViewTextBoxColumn
             // 
-            this.Balance.HeaderText = "Balance";
-            this.Balance.Name = "Balance";
-            this.Balance.ReadOnly = true;
+            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
+            this.balanceDataGridViewTextBoxColumn.HeaderText = "Balance";
+            this.balanceDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            this.balanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clsClientBindingSource
+            // 
+            this.clsClientBindingSource.DataSource = typeof(Bank_System.Classes.clsClient);
+            // 
+            // clsClientBindingSource1
+            // 
+            this.clsClientBindingSource1.DataSource = typeof(Bank_System.Classes.clsClient);
             // 
             // ClientListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.NOClient_Label);
+            this.ClientSize = new System.Drawing.Size(1896, 1048);
             this.Controls.Add(this.MainMenu_Button);
             this.Controls.Add(this.ClientTable);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ClientListForm";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientList";
+            this.Load += new System.EventHandler(this.ClientListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ClientTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsClientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsClientBindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private System.Windows.Forms.Label NOClient_Label;
         public ComponentFactory.Krypton.Toolkit.KryptonButton MainMenu_Button;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView ClientTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AccountNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PinCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Balance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accountIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pINCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource clsClientBindingSource;
+        private System.Windows.Forms.BindingSource clsClientBindingSource1;
     }
 }

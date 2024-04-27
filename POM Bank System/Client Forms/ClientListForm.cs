@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bank_System.Classes;
 using ComponentFactory.Krypton.Toolkit;
 
 namespace Bank_System
@@ -24,6 +25,18 @@ namespace Bank_System
             this.Hide();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void ClientListForm_Load(object sender, EventArgs e)
+        {
+            clsClient Client = new clsClient();
+
+            List<clsClient> ClientsList = Client.ShowAllClients();
+
+            foreach (clsClient client in ClientsList)
+            {
+                clsClientBindingSource.Add(client);
+            }
         }
     }
 }
