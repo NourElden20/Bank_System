@@ -296,9 +296,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Clients.txt" />
-    <Content Include="bin\Debug\Index.txt" />
-    <Content Include="bin\Debug\Users.txt" />
+    <Content Include="Files\Clients.txt" />
+    <Content Include="Files\Index.txt" />
+    <Content Include="Files\Users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
