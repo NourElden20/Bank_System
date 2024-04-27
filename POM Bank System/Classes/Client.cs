@@ -73,7 +73,7 @@ namespace Bank_System.Classes
 
         private clsClient ConvertRecordToClient(string Record, string Delim = "#//#")
         {
-            string[] Fields = Record.Split(Delim.ToArray());
+            string[] Fields = Record.Split(Delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             clsClient Client = new clsClient();
             Client.AccountID = Fields[0];
@@ -102,6 +102,7 @@ namespace Bank_System.Classes
         {
             StreamReader sr = new StreamReader(FileName);
             IndexData indexData = new IndexData();
+            ClientsDict.Clear();
             string Line = "";
 
             while ((Line = sr.ReadLine()) != null)
@@ -117,7 +118,7 @@ namespace Bank_System.Classes
         private IndexData ConvertIndexRecordToKeyValuePair(string Record, string Delim = "#//#")
         {
             IndexData indexData = new IndexData();
-            string[] Fields = Record.Split(Delim.ToArray());
+            string[] Fields = Record.Split(Delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
             indexData.Key = Convert.ToInt32(Fields[0]);
             indexData.Position = Convert.ToInt32(Fields[1]);
 
@@ -267,11 +268,13 @@ namespace Bank_System.Classes
                 Index_Data.Position += Line.Length + 2;
             }
 
+            MyStreamReader.Close();
+            ClientsFile.Close();
         }
 
-        public void ShowAllClients()
+        public List<clsClient> ShowAllClients()
         {
-            throw new NotImplementedException();
+            return LoadClientsDataFromFile(ClientsFileName); 
         }
 
         public void AddNewClient(clsClient Client)
@@ -346,78 +349,58 @@ namespace Bank_System.Classes
         public bool DeleteClient(string AccountID)
         {
             clsClient Client = new clsClient();
-            //ClientsDict = LoadIndexFileIntoDic(IndexFileName);
+            ClientsDict = LoadIndexFileIntoDic(IndexFileName);
 
-            if (FindClientByAccountID(AccountID, out Client))
+            // Prompt the user for confirmation
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Clint", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
             {
-                // Prompt the user for confirmation
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Clint", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    MarkForDelete(AccountID);
-                    ClientsDict.Remove(Convert.ToInt32(AccountID));
+                MarkForDelete(AccountID);
+                ClientsDict.Remove(Convert.ToInt32(AccountID));
 
-                    // Update our list with Deleted Clients!
-                    List<clsClient> ClientsList = LoadClientsDataFromFile(ClientsFileName);
+                // Update our list with Deleted Clients!
+                List<clsClient> ClientsList = LoadClientsDataFromFile(ClientsFileName);
 
-                    //Delete Record From ClientsFile
-                    SaveClientsDataToFile(ClientsFileName, ClientsList);
+                //Delete Record From ClientsFile
+                SaveClientsDataToFile(ClientsFileName, ClientsList);
 
-                    //Delete the Record Key from Index FiLE
-                    UpdateIndexFile(ClientsDict);
+                //Delete the Record Key from Index FiLE
+                UpdateIndexFile(ClientsDict);
 
-                    MessageBox.Show($"Client With Account Number: {AccountID}, has been deleted Successfully!", "Client has been Deleted!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    return false;// User canceled deletion
-                }
+                MessageBox.Show($"Client With Account Number: {AccountID}, has been deleted Successfully!", "Client has been Deleted!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
             }
             else
             {
-                //Not Founded!
-                MessageBox.Show($"Client With Account Number: {AccountID}, is not Exists!", "Warning!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                return false;
+                return false;// User canceled deletion
             }
         }
 
-        public bool UpdateClient(clsClient newClient)
+        public bool UpdateClient(clsClient newClient, DialogResult dialogResult)
         {
-            clsClient Client;
-            if (FindClientByAccountID(newClient.accountID, out Client))
+            
+            if (dialogResult == DialogResult.Yes)
             {
-                // Prompt the user for confirmation
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to Update this Clint", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    Client = newClient;
-                    List<clsClient> ClientsList = LoadClientsDataFromFile(ClientsFileName);
-                    ClientsList = UpdateClientsList(ClientsList, Client);
+                List<clsClient> ClientsList = LoadClientsDataFromFile(ClientsFileName);
+                ClientsList = UpdateClientsList(ClientsList, newClient);
 
-                    SaveClientsDataToFile(ClientsFileName, ClientsList);
+                SaveClientsDataToFile(ClientsFileName, ClientsList);
 
-                    /*
-                    We must Update the index File because updating record mean there may be
-                    change in the record length which Will Sabotage the index File and will give me Wrong Data!
-                    1) we need to update the dictionary 
-                    2) Rewrite the Dictionary in the index file
-                    */
+                /*
+                We must Update the index File because updating record mean there may be
+                change in the record length which Will Sabotage the index File and will give me Wrong Data!
+                1) we need to update the dictionary 
+                2) Rewrite the Dictionary in the index file
+                */
 
-                    UpdateDictionary();
-                    UpdateIndexFile(ClientsDict);
+                UpdateDictionary();
+                UpdateIndexFile(ClientsDict);
 
-                    MessageBox.Show($"Client With Account Number: {AccountID}, has been Updated Successfully!", "Client has been Updated!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    return false;// User canceled deletion
-                }
+                MessageBox.Show($"Client With Account Number: {AccountID}, has been Updated Successfully!", "Client has been Updated!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
             }
             else
             {
-                MessageBox.Show($"Client With Account Number: {AccountID}, is not Exists!", "Warning!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return false;
             }
         }

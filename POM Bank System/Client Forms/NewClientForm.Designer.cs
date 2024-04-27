@@ -96,46 +96,50 @@
             // 
             this.Account_Number_TextBox.Location = new System.Drawing.Point(353, 137);
             this.Account_Number_TextBox.Name = "Account_Number_TextBox";
-            this.Account_Number_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.Account_Number_TextBox.Size = new System.Drawing.Size(193, 31);
             this.Account_Number_TextBox.TabIndex = 44;
+            this.Account_Number_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Account_Number_TextBox_KeyDown);
             // 
             // PINCode_TextBox
             // 
             this.PINCode_TextBox.Location = new System.Drawing.Point(353, 192);
             this.PINCode_TextBox.Name = "PINCode_TextBox";
-            this.PINCode_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.PINCode_TextBox.Size = new System.Drawing.Size(193, 31);
             this.PINCode_TextBox.TabIndex = 45;
+            this.PINCode_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PINCode_TextBox_KeyDown);
             // 
             // Client_Name_TextBox
             // 
             this.Client_Name_TextBox.Location = new System.Drawing.Point(353, 246);
             this.Client_Name_TextBox.Name = "Client_Name_TextBox";
-            this.Client_Name_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.Client_Name_TextBox.Size = new System.Drawing.Size(193, 31);
             this.Client_Name_TextBox.TabIndex = 44;
+            this.Client_Name_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Client_Name_TextBox_KeyDown);
             // 
             // Client_Phone_TextBox
             // 
             this.Client_Phone_TextBox.Location = new System.Drawing.Point(353, 301);
             this.Client_Phone_TextBox.Name = "Client_Phone_TextBox";
-            this.Client_Phone_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.Client_Phone_TextBox.Size = new System.Drawing.Size(193, 31);
             this.Client_Phone_TextBox.TabIndex = 45;
+            this.Client_Phone_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Client_Phone_TextBox_KeyDown);
             // 
             // Account_Balance_TextBox
             // 
             this.Account_Balance_TextBox.Location = new System.Drawing.Point(353, 362);
             this.Account_Balance_TextBox.Name = "Account_Balance_TextBox";
-            this.Account_Balance_TextBox.Size = new System.Drawing.Size(193, 23);
+            this.Account_Balance_TextBox.Size = new System.Drawing.Size(193, 31);
             this.Account_Balance_TextBox.TabIndex = 45;
             // 
             // Title_AddingClient_Label
             // 
             this.Title_AddingClient_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Title_AddingClient_Label.AutoSize = true;
-            this.Title_AddingClient_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title_AddingClient_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title_AddingClient_Label.Location = new System.Drawing.Point(169, 45);
             this.Title_AddingClient_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Title_AddingClient_Label.Name = "Title_AddingClient_Label";
-            this.Title_AddingClient_Label.Size = new System.Drawing.Size(258, 36);
+            this.Title_AddingClient_Label.Size = new System.Drawing.Size(365, 46);
             this.Title_AddingClient_Label.TabIndex = 43;
             this.Title_AddingClient_Label.Text = "Adding New Client";
             // 
@@ -145,7 +149,7 @@
             this.Account_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Account_Number_Label.Location = new System.Drawing.Point(71, 137);
             this.Account_Number_Label.Name = "Account_Number_Label";
-            this.Account_Number_Label.Size = new System.Drawing.Size(158, 22);
+            this.Account_Number_Label.Size = new System.Drawing.Size(225, 30);
             this.Account_Number_Label.TabIndex = 25;
             this.Account_Number_Label.Text = "Account_Number :";
             // 
@@ -155,7 +159,7 @@
             this.PINCode_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PINCode_Label.Location = new System.Drawing.Point(71, 193);
             this.PINCode_Label.Name = "PINCode_Label";
-            this.PINCode_Label.Size = new System.Drawing.Size(92, 22);
+            this.PINCode_Label.Size = new System.Drawing.Size(130, 30);
             this.PINCode_Label.TabIndex = 26;
             this.PINCode_Label.Text = "PINCode :";
             // 
@@ -165,7 +169,7 @@
             this.Client_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_Name_Label.Location = new System.Drawing.Point(71, 247);
             this.Client_Name_Label.Name = "Client_Name_Label";
-            this.Client_Name_Label.Size = new System.Drawing.Size(118, 22);
+            this.Client_Name_Label.Size = new System.Drawing.Size(169, 30);
             this.Client_Name_Label.TabIndex = 25;
             this.Client_Name_Label.Text = "Client Name :";
             // 
@@ -175,7 +179,7 @@
             this.Client_Phone_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_Phone_Label.Location = new System.Drawing.Point(71, 302);
             this.Client_Phone_Label.Name = "Client_Phone_Label";
-            this.Client_Phone_Label.Size = new System.Drawing.Size(123, 22);
+            this.Client_Phone_Label.Size = new System.Drawing.Size(173, 30);
             this.Client_Phone_Label.TabIndex = 25;
             this.Client_Phone_Label.Text = "Client Phone :";
             // 
@@ -185,7 +189,7 @@
             this.Account_Balance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Account_Balance_Label.Location = new System.Drawing.Point(71, 363);
             this.Account_Balance_Label.Name = "Account_Balance_Label";
-            this.Account_Balance_Label.Size = new System.Drawing.Size(155, 22);
+            this.Account_Balance_Label.Size = new System.Drawing.Size(218, 30);
             this.Account_Balance_Label.TabIndex = 25;
             this.Account_Balance_Label.Text = "Account Balance :";
             // 
@@ -246,6 +250,7 @@
             this.Add_Button.StateTracking.Border.Width = 1;
             this.Add_Button.TabIndex = 34;
             this.Add_Button.Values.Text = "Add";
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // MainMenu_Button
             // 
@@ -322,7 +327,7 @@
             // 
             // NewClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1225, 681);
