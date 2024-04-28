@@ -14,7 +14,9 @@ namespace Bank_System
 {
     public partial class DepositForm : KryptonForm
     {
-        public DepositForm()
+
+        private int permission;
+        public DepositForm(int per)
         {
             InitializeComponent();
         }
@@ -23,7 +25,7 @@ namespace Bank_System
 
         private void TransactionMenu_Button_Click(object sender, EventArgs e)
         {
-            TransactionsForm form = new TransactionsForm();
+            TransactionsForm form = new TransactionsForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();
