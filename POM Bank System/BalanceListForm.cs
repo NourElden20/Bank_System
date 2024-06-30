@@ -18,7 +18,12 @@ namespace Bank_System
         {
             InitializeComponent();
         }
-
+        private int permission;
+        public BalanceListForm(int per)
+        {
+            InitializeComponent();
+            permission = per;
+        }
         private void BalanceListForm_Load(object sender, EventArgs e)
         {
             clsClient Client = new clsClient();
@@ -40,7 +45,7 @@ namespace Bank_System
 
         private void TransactionsMenu_Button_Click(object sender, EventArgs e)
         {
-            TransactionsForm form = new TransactionsForm();
+            TransactionsForm form = new TransactionsForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();

@@ -15,14 +15,16 @@ namespace Bank_System
 {
     public partial class FindClientForm : KryptonForm
     {
-        public FindClientForm()
+        private int permission;
+        public FindClientForm(int per)
         {
             InitializeComponent();
+            permission = per;
         }
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm();
+            MainMenuForm form = new MainMenuForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();

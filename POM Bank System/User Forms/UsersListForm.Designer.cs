@@ -89,6 +89,7 @@
             // 
             // ManageUsersMenu_Button
             // 
+            this.ManageUsersMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ManageUsersMenu_Button.Location = new System.Drawing.Point(12, 382);
             this.ManageUsersMenu_Button.Name = "ManageUsersMenu_Button";
             this.ManageUsersMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));

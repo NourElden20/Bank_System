@@ -126,6 +126,7 @@
             // 
             // Login_Button
             // 
+            this.Login_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Login_Button.Location = new System.Drawing.Point(475, 322);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));

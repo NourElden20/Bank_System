@@ -23,6 +23,12 @@ namespace Bank_System
             User.id++;
         }
 
+        private int permission;
+        public UsersForm(int per)
+        {
+            InitializeComponent();
+            permission = per;
+        }
         private void AddNewUser_Button_Click(object sender, EventArgs e)
         {
             NewUserForm form = new NewUserForm();
@@ -34,7 +40,7 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm();
+            MainMenuForm form = new MainMenuForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();

@@ -86,6 +86,7 @@
             // 
             // ListUsers_Button
             // 
+            this.ListUsers_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ListUsers_Button.Location = new System.Drawing.Point(114, 303);
             this.ListUsers_Button.Name = "ListUsers_Button";
             this.ListUsers_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -145,6 +146,7 @@
             // 
             // AddNewUser_Button
             // 
+            this.AddNewUser_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddNewUser_Button.Location = new System.Drawing.Point(114, 171);
             this.AddNewUser_Button.Name = "AddNewUser_Button";
             this.AddNewUser_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -204,6 +206,7 @@
             // 
             // DeleteUser_Button
             // 
+            this.DeleteUser_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteUser_Button.Location = new System.Drawing.Point(114, 435);
             this.DeleteUser_Button.Name = "DeleteUser_Button";
             this.DeleteUser_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -263,6 +266,7 @@
             // 
             // MainMenu_Button
             // 
+            this.MainMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainMenu_Button.Location = new System.Drawing.Point(25, 590);
             this.MainMenu_Button.Name = "MainMenu_Button";
             this.MainMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));

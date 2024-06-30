@@ -268,6 +268,7 @@
             // 
             // Add_Button
             // 
+            this.Add_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Add_Button.Location = new System.Drawing.Point(176, 402);
             this.Add_Button.Name = "Add_Button";
             this.Add_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -327,6 +328,7 @@
             // 
             // UsersMenu_Button
             // 
+            this.UsersMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UsersMenu_Button.Location = new System.Drawing.Point(11, 472);
             this.UsersMenu_Button.Name = "UsersMenu_Button";
             this.UsersMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));

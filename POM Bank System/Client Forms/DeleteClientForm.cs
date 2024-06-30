@@ -15,16 +15,18 @@ namespace Bank_System
 {
     public partial class DeleteClientForm : KryptonForm
     {
-        public DeleteClientForm()
+        private int permission;
+        public DeleteClientForm(int per)
         {
             InitializeComponent();
+            permission = per;
         }
 
         clsClient Client = new clsClient();
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm();
+            MainMenuForm form = new MainMenuForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();
