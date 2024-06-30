@@ -90,6 +90,7 @@
             // 
             // ShowClientList_Button
             // 
+            this.ShowClientList_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShowClientList_Button.Location = new System.Drawing.Point(318, 320);
             this.ShowClientList_Button.Name = "ShowClientList_Button";
             this.ShowClientList_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -149,6 +150,7 @@
             // 
             // AddNewClient_Button
             // 
+            this.AddNewClient_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddNewClient_Button.Location = new System.Drawing.Point(11, 143);
             this.AddNewClient_Button.Name = "AddNewClient_Button";
             this.AddNewClient_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -208,6 +210,7 @@
             // 
             // DeleteClient_Button
             // 
+            this.DeleteClient_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteClient_Button.Location = new System.Drawing.Point(318, 143);
             this.DeleteClient_Button.Name = "DeleteClient_Button";
             this.DeleteClient_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -267,6 +270,7 @@
             // 
             // UpdateClientInfo_Button
             // 
+            this.UpdateClientInfo_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateClientInfo_Button.Location = new System.Drawing.Point(318, 233);
             this.UpdateClientInfo_Button.Name = "UpdateClientInfo_Button";
             this.UpdateClientInfo_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -326,6 +330,7 @@
             // 
             // FindClient_Button
             // 
+            this.FindClient_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FindClient_Button.Location = new System.Drawing.Point(11, 320);
             this.FindClient_Button.Name = "FindClient_Button";
             this.FindClient_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -385,6 +390,7 @@
             // 
             // Transations_Button
             // 
+            this.Transations_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Transations_Button.Location = new System.Drawing.Point(11, 233);
             this.Transations_Button.Name = "Transations_Button";
             this.Transations_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -444,6 +450,7 @@
             // 
             // ManageUsers_Button
             // 
+            this.ManageUsers_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ManageUsers_Button.Location = new System.Drawing.Point(141, 453);
             this.ManageUsers_Button.Name = "ManageUsers_Button";
             this.ManageUsers_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -503,6 +510,7 @@
             // 
             // Logout_Button
             // 
+            this.Logout_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Logout_Button.Location = new System.Drawing.Point(141, 545);
             this.Logout_Button.Name = "Logout_Button";
             this.Logout_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));

@@ -14,9 +14,11 @@ namespace Bank_System
 {
     public partial class UpdatedClientForm : KryptonForm
     {
-        public UpdatedClientForm()
+        private int permission;
+        public UpdatedClientForm(int per)
         {
             InitializeComponent();
+            permission = per;
         }
 
         clsClient Client = new clsClient();
@@ -58,7 +60,7 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm();
+            MainMenuForm form = new MainMenuForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();

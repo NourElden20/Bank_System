@@ -132,6 +132,7 @@
             // 
             // Delete_Button
             // 
+            this.Delete_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Delete_Button.Location = new System.Drawing.Point(135, 283);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));

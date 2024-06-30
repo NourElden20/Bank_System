@@ -42,18 +42,26 @@ namespace Bank_System
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            if (!CheckIFFieldsEmpty())
+            user.Username = username_TextBox.Text;
+            user.Password = Password_TextBox.Text;
+            string confirmPassword = confirm_password_TextBox.Text;
+            if (user.Password != confirmPassword)
             {
-                user.Username   = username_TextBox.Text;
-                user.Password   = Password_TextBox.Text;
-                if(yes_radioButton.Checked) user.Permission = "Admin";
-                else
-                {
-                    if (RBtn_MidLevel.Checked) user.Permission = "Mid-Level";
-                    if (RBtn_LowLevel.Checked) user.Permission = "Low-Level";
-                }
-               UserOperations.AddUser(user);
-            }        
+                MessageBox.Show("The passwords you entered don't match", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (user.Password.Length < 8)
+            {
+                MessageBox.Show("Password must be at least 8 characters long.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (yes_radioButton.Checked) user.Permission = "Admin";
+            else
+            {
+                if (RBtn_MidLevel.Checked) user.Permission = "Mid-Level";
+                if (RBtn_LowLevel.Checked) user.Permission = "Low-Level";
+            }
+            UserOperations.AddUser(user);
         }
         private bool CheckIFFieldsEmpty()
         {

@@ -97,27 +97,25 @@
             // 
             // Account_Number_TextBox
             // 
-            this.Account_Number_TextBox.Location = new System.Drawing.Point(436, 77);
-            this.Account_Number_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Account_Number_TextBox.Location = new System.Drawing.Point(291, 50);
             this.Account_Number_TextBox.Name = "Account_Number_TextBox";
-            this.Account_Number_TextBox.Size = new System.Drawing.Size(290, 31);
+            this.Account_Number_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_TextBox.TabIndex = 44;
             // 
             // Account_Number_Label
             // 
             this.Account_Number_Label.AutoSize = true;
             this.Account_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Account_Number_Label.Location = new System.Drawing.Point(105, 77);
-            this.Account_Number_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Account_Number_Label.Location = new System.Drawing.Point(70, 50);
             this.Account_Number_Label.Name = "Account_Number_Label";
-            this.Account_Number_Label.Size = new System.Drawing.Size(225, 30);
+            this.Account_Number_Label.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_Label.TabIndex = 25;
             this.Account_Number_Label.Text = "Account_Number :";
             // 
             // Enter_AccNumber_Button
             // 
-            this.Enter_AccNumber_Button.Location = new System.Drawing.Point(238, 165);
-            this.Enter_AccNumber_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Enter_AccNumber_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Enter_AccNumber_Button.Location = new System.Drawing.Point(159, 107);
             this.Enter_AccNumber_Button.Name = "Enter_AccNumber_Button";
             this.Enter_AccNumber_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Enter_AccNumber_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -131,7 +129,7 @@
             this.Enter_AccNumber_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.Enter_AccNumber_Button.OverrideDefault.Border.Rounding = 20;
             this.Enter_AccNumber_Button.OverrideDefault.Border.Width = 1;
-            this.Enter_AccNumber_Button.Size = new System.Drawing.Size(304, 72);
+            this.Enter_AccNumber_Button.Size = new System.Drawing.Size(203, 47);
             this.Enter_AccNumber_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.Enter_AccNumber_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Enter_AccNumber_Button.StateCommon.Back.ColorAngle = 45F;
@@ -178,10 +176,9 @@
             // 
             this.Account_Number_DetailsLabel.AutoSize = true;
             this.Account_Number_DetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(105, 402);
-            this.Account_Number_DetailsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Account_Number_DetailsLabel.Location = new System.Drawing.Point(70, 261);
             this.Account_Number_DetailsLabel.Name = "Account_Number_DetailsLabel";
-            this.Account_Number_DetailsLabel.Size = new System.Drawing.Size(225, 30);
+            this.Account_Number_DetailsLabel.Size = new System.Drawing.Size(158, 22);
             this.Account_Number_DetailsLabel.TabIndex = 25;
             this.Account_Number_DetailsLabel.Text = "Account_Number :";
             // 
@@ -190,10 +187,10 @@
             this.Client_Details_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Client_Details_Label.AutoSize = true;
             this.Client_Details_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Details_Label.Location = new System.Drawing.Point(242, 283);
-            this.Client_Details_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Client_Details_Label.Location = new System.Drawing.Point(161, 184);
+            this.Client_Details_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Client_Details_Label.Name = "Client_Details_Label";
-            this.Client_Details_Label.Size = new System.Drawing.Size(293, 46);
+            this.Client_Details_Label.Size = new System.Drawing.Size(206, 31);
             this.Client_Details_Label.TabIndex = 43;
             this.Client_Details_Label.Text = "Client Details :";
             // 
@@ -201,10 +198,9 @@
             // 
             this.PINCode_Label.AutoSize = true;
             this.PINCode_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PINCode_Label.Location = new System.Drawing.Point(110, 483);
-            this.PINCode_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PINCode_Label.Location = new System.Drawing.Point(73, 314);
             this.PINCode_Label.Name = "PINCode_Label";
-            this.PINCode_Label.Size = new System.Drawing.Size(130, 30);
+            this.PINCode_Label.Size = new System.Drawing.Size(92, 22);
             this.PINCode_Label.TabIndex = 26;
             this.PINCode_Label.Text = "PINCode :";
             // 
@@ -212,10 +208,9 @@
             // 
             this.Client_Name_Label.AutoSize = true;
             this.Client_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Name_Label.Location = new System.Drawing.Point(110, 562);
-            this.Client_Name_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Client_Name_Label.Location = new System.Drawing.Point(73, 365);
             this.Client_Name_Label.Name = "Client_Name_Label";
-            this.Client_Name_Label.Size = new System.Drawing.Size(169, 30);
+            this.Client_Name_Label.Size = new System.Drawing.Size(118, 22);
             this.Client_Name_Label.TabIndex = 25;
             this.Client_Name_Label.Text = "Client Name :";
             // 
@@ -223,10 +218,9 @@
             // 
             this.Client_Phone_Label.AutoSize = true;
             this.Client_Phone_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_Phone_Label.Location = new System.Drawing.Point(110, 640);
-            this.Client_Phone_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Client_Phone_Label.Location = new System.Drawing.Point(73, 416);
             this.Client_Phone_Label.Name = "Client_Phone_Label";
-            this.Client_Phone_Label.Size = new System.Drawing.Size(173, 30);
+            this.Client_Phone_Label.Size = new System.Drawing.Size(123, 22);
             this.Client_Phone_Label.TabIndex = 25;
             this.Client_Phone_Label.Text = "Client Phone :";
             // 
@@ -234,67 +228,61 @@
             // 
             this.Account_Balance_Label.AutoSize = true;
             this.Account_Balance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Account_Balance_Label.Location = new System.Drawing.Point(110, 728);
-            this.Account_Balance_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Account_Balance_Label.Location = new System.Drawing.Point(73, 473);
             this.Account_Balance_Label.Name = "Account_Balance_Label";
-            this.Account_Balance_Label.Size = new System.Drawing.Size(218, 30);
+            this.Account_Balance_Label.Size = new System.Drawing.Size(155, 22);
             this.Account_Balance_Label.TabIndex = 25;
             this.Account_Balance_Label.Text = "Account Balance :";
             // 
             // Account_Number_DetailsTextBox
             // 
             this.Account_Number_DetailsTextBox.Enabled = false;
-            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(436, 402);
-            this.Account_Number_DetailsTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Account_Number_DetailsTextBox.Location = new System.Drawing.Point(291, 261);
             this.Account_Number_DetailsTextBox.Name = "Account_Number_DetailsTextBox";
             this.Account_Number_DetailsTextBox.ReadOnly = true;
-            this.Account_Number_DetailsTextBox.Size = new System.Drawing.Size(290, 31);
+            this.Account_Number_DetailsTextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Number_DetailsTextBox.TabIndex = 44;
             // 
             // PINCode_TextBox
             // 
             this.PINCode_TextBox.Enabled = false;
-            this.PINCode_TextBox.Location = new System.Drawing.Point(436, 483);
-            this.PINCode_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PINCode_TextBox.Location = new System.Drawing.Point(291, 314);
             this.PINCode_TextBox.Name = "PINCode_TextBox";
             this.PINCode_TextBox.ReadOnly = true;
-            this.PINCode_TextBox.Size = new System.Drawing.Size(290, 31);
+            this.PINCode_TextBox.Size = new System.Drawing.Size(193, 23);
             this.PINCode_TextBox.TabIndex = 46;
             // 
             // Client_Name_TextBox
             // 
             this.Client_Name_TextBox.Enabled = false;
-            this.Client_Name_TextBox.Location = new System.Drawing.Point(436, 562);
-            this.Client_Name_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Client_Name_TextBox.Location = new System.Drawing.Point(291, 365);
             this.Client_Name_TextBox.Name = "Client_Name_TextBox";
             this.Client_Name_TextBox.ReadOnly = true;
-            this.Client_Name_TextBox.Size = new System.Drawing.Size(290, 31);
+            this.Client_Name_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Client_Name_TextBox.TabIndex = 48;
             // 
             // Client_Phone_TextBox
             // 
             this.Client_Phone_TextBox.Enabled = false;
-            this.Client_Phone_TextBox.Location = new System.Drawing.Point(436, 640);
-            this.Client_Phone_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Client_Phone_TextBox.Location = new System.Drawing.Point(291, 416);
             this.Client_Phone_TextBox.Name = "Client_Phone_TextBox";
             this.Client_Phone_TextBox.ReadOnly = true;
-            this.Client_Phone_TextBox.Size = new System.Drawing.Size(290, 31);
+            this.Client_Phone_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Client_Phone_TextBox.TabIndex = 47;
             // 
             // Account_Balance_TextBox
             // 
             this.Account_Balance_TextBox.Enabled = false;
-            this.Account_Balance_TextBox.Location = new System.Drawing.Point(436, 726);
-            this.Account_Balance_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Account_Balance_TextBox.Location = new System.Drawing.Point(291, 472);
             this.Account_Balance_TextBox.Name = "Account_Balance_TextBox";
             this.Account_Balance_TextBox.ReadOnly = true;
-            this.Account_Balance_TextBox.Size = new System.Drawing.Size(290, 31);
+            this.Account_Balance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Account_Balance_TextBox.TabIndex = 45;
             // 
             // Delete_Button
             // 
-            this.Delete_Button.Location = new System.Drawing.Point(238, 818);
-            this.Delete_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Delete_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete_Button.Location = new System.Drawing.Point(159, 532);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Delete_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -308,7 +296,7 @@
             this.Delete_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.Delete_Button.OverrideDefault.Border.Rounding = 20;
             this.Delete_Button.OverrideDefault.Border.Width = 1;
-            this.Delete_Button.Size = new System.Drawing.Size(304, 72);
+            this.Delete_Button.Size = new System.Drawing.Size(203, 47);
             this.Delete_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.Delete_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
             this.Delete_Button.StateCommon.Back.ColorAngle = 45F;
@@ -353,8 +341,8 @@
             // 
             // MainMenu_Button
             // 
-            this.MainMenu_Button.Location = new System.Drawing.Point(16, 952);
-            this.MainMenu_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MainMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MainMenu_Button.Location = new System.Drawing.Point(11, 619);
             this.MainMenu_Button.Name = "MainMenu_Button";
             this.MainMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.MainMenu_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -368,7 +356,7 @@
             this.MainMenu_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.MainMenu_Button.OverrideDefault.Border.Rounding = 20;
             this.MainMenu_Button.OverrideDefault.Border.Width = 1;
-            this.MainMenu_Button.Size = new System.Drawing.Size(326, 103);
+            this.MainMenu_Button.Size = new System.Drawing.Size(217, 67);
             this.MainMenu_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.MainMenu_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.MainMenu_Button.StateCommon.Back.ColorAngle = 45F;
@@ -416,20 +404,19 @@
             // MM_pic
             // 
             this.MM_pic.Image = global::Bank_System.Properties.Resources._9907646;
-            this.MM_pic.Location = new System.Drawing.Point(922, 18);
-            this.MM_pic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MM_pic.Location = new System.Drawing.Point(615, 12);
             this.MM_pic.Name = "MM_pic";
-            this.MM_pic.Size = new System.Drawing.Size(974, 1037);
+            this.MM_pic.Size = new System.Drawing.Size(649, 674);
             this.MM_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MM_pic.TabIndex = 33;
             this.MM_pic.TabStop = false;
             // 
             // DeleteClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1914, 1091);
+            this.ClientSize = new System.Drawing.Size(1276, 690);
             this.Controls.Add(this.MM_pic);
             this.Controls.Add(this.Account_Number_Label);
             this.Controls.Add(this.Account_Number_TextBox);
@@ -447,7 +434,6 @@
             this.Controls.Add(this.Client_Name_TextBox);
             this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.MainMenu_Button);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DeleteClientForm";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

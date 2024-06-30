@@ -26,12 +26,24 @@ namespace Bank_System
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-            
-            MainMenuForm form = new MainMenuForm();
-            this.Hide();
-            form.ShowDialog();
-            this.Close();
-          
+            string username = Username_TextBox.Text;
+            string password = Password_TextBox.Text;
+            MyFile.LoadUsersFromFileToList();
+            int userID = UserOperations.FindUsers(username, password);
+
+            if (userID != -1)
+            {
+                this.Hide();
+                MainMenuForm form = new MainMenuForm(userID);
+                form.ShowDialog();
+                this.Close();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password!", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

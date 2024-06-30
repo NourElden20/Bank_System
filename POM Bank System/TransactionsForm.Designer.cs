@@ -85,6 +85,7 @@
             // 
             // ShowBalance_Button
             // 
+            this.ShowBalance_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShowBalance_Button.Location = new System.Drawing.Point(154, 299);
             this.ShowBalance_Button.Name = "ShowBalance_Button";
             this.ShowBalance_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -144,6 +145,7 @@
             // 
             // Deposit_Button
             // 
+            this.Deposit_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Deposit_Button.Location = new System.Drawing.Point(154, 73);
             this.Deposit_Button.Name = "Deposit_Button";
             this.Deposit_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -203,6 +205,7 @@
             // 
             // Withdraw_Button
             // 
+            this.Withdraw_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Withdraw_Button.Location = new System.Drawing.Point(154, 183);
             this.Withdraw_Button.Name = "Withdraw_Button";
             this.Withdraw_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(49)))));
@@ -262,6 +265,7 @@
             // 
             // MainMenu_Button
             // 
+            this.MainMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainMenu_Button.Location = new System.Drawing.Point(46, 562);
             this.MainMenu_Button.Name = "MainMenu_Button";
             this.MainMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));

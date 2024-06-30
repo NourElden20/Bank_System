@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.TransactionsMenu_Button = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.BalanceTable = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.TotalBalance_Label = new System.Windows.Forms.Label();
-            this.NOClient_Label = new System.Windows.Forms.Label();
             this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clsClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TotalBalance_Label = new System.Windows.Forms.Label();
+            this.NOClient_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BalanceTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsClientBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -90,8 +90,8 @@
             // 
             // TransactionsMenu_Button
             // 
-            this.TransactionsMenu_Button.Location = new System.Drawing.Point(48, 891);
-            this.TransactionsMenu_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TransactionsMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TransactionsMenu_Button.Location = new System.Drawing.Point(32, 579);
             this.TransactionsMenu_Button.Name = "TransactionsMenu_Button";
             this.TransactionsMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.TransactionsMenu_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -105,7 +105,7 @@
             this.TransactionsMenu_Button.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.TransactionsMenu_Button.OverrideDefault.Border.Rounding = 20;
             this.TransactionsMenu_Button.OverrideDefault.Border.Width = 1;
-            this.TransactionsMenu_Button.Size = new System.Drawing.Size(447, 122);
+            this.TransactionsMenu_Button.Size = new System.Drawing.Size(298, 79);
             this.TransactionsMenu_Button.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.TransactionsMenu_Button.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.TransactionsMenu_Button.StateCommon.Back.ColorAngle = 45F;
@@ -166,21 +166,20 @@
             this.BalanceTable.GridStyles.StyleDataCells = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.BalanceTable.GridStyles.StyleRow = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.BalanceTable.HideOuterBorders = true;
-            this.BalanceTable.Location = new System.Drawing.Point(2, 2);
-            this.BalanceTable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BalanceTable.Location = new System.Drawing.Point(1, 1);
             this.BalanceTable.Name = "BalanceTable";
             this.BalanceTable.ReadOnly = true;
             this.BalanceTable.RowHeadersVisible = false;
             this.BalanceTable.RowHeadersWidth = 62;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(165)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.BalanceTable.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(165)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.BalanceTable.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.BalanceTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.BalanceTable.Size = new System.Drawing.Size(1894, 820);
+            this.BalanceTable.Size = new System.Drawing.Size(1263, 533);
             this.BalanceTable.StateCommon.Background.Color1 = System.Drawing.Color.Transparent;
             this.BalanceTable.StateCommon.Background.Color2 = System.Drawing.Color.Transparent;
             this.BalanceTable.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
@@ -199,31 +198,6 @@
             this.BalanceTable.StateCommon.HeaderRow.Back.Color1 = System.Drawing.Color.White;
             this.BalanceTable.StateCommon.HeaderRow.Back.Color2 = System.Drawing.Color.White;
             this.BalanceTable.TabIndex = 45;
-            // 
-            // TotalBalance_Label
-            // 
-            this.TotalBalance_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
-            this.TotalBalance_Label.AutoSize = true;
-            this.TotalBalance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalBalance_Label.Location = new System.Drawing.Point(1125, 922);
-            this.TotalBalance_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.TotalBalance_Label.Name = "TotalBalance_Label";
-            this.TotalBalance_Label.Size = new System.Drawing.Size(314, 46);
-            this.TotalBalance_Label.TabIndex = 46;
-            this.TotalBalance_Label.Text = "Total Balance : ";
-            // 
-            // NOClient_Label
-            // 
-            this.NOClient_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
-            this.NOClient_Label.AutoSize = true;
-            this.NOClient_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NOClient_Label.ForeColor = System.Drawing.Color.Gray;
-            this.NOClient_Label.Location = new System.Drawing.Point(632, 931);
-            this.NOClient_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.NOClient_Label.Name = "NOClient_Label";
-            this.NOClient_Label.Size = new System.Drawing.Size(183, 37);
-            this.NOClient_Label.TabIndex = 47;
-            this.NOClient_Label.Text = "NO.clients :";
             // 
             // accountIDDataGridViewTextBoxColumn
             // 
@@ -253,17 +227,41 @@
             // 
             this.clsClientBindingSource.DataSource = typeof(Bank_System.Classes.clsClient);
             // 
+            // TotalBalance_Label
+            // 
+            this.TotalBalance_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
+            this.TotalBalance_Label.AutoSize = true;
+            this.TotalBalance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalBalance_Label.Location = new System.Drawing.Point(750, 599);
+            this.TotalBalance_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalBalance_Label.Name = "TotalBalance_Label";
+            this.TotalBalance_Label.Size = new System.Drawing.Size(218, 31);
+            this.TotalBalance_Label.TabIndex = 46;
+            this.TotalBalance_Label.Text = "Total Balance : ";
+            // 
+            // NOClient_Label
+            // 
+            this.NOClient_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
+            this.NOClient_Label.AutoSize = true;
+            this.NOClient_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NOClient_Label.ForeColor = System.Drawing.Color.Gray;
+            this.NOClient_Label.Location = new System.Drawing.Point(421, 605);
+            this.NOClient_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NOClient_Label.Name = "NOClient_Label";
+            this.NOClient_Label.Size = new System.Drawing.Size(123, 25);
+            this.NOClient_Label.TabIndex = 47;
+            this.NOClient_Label.Text = "NO.clients :";
+            // 
             // BalanceListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1896, 1048);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.NOClient_Label);
             this.Controls.Add(this.TotalBalance_Label);
             this.Controls.Add(this.BalanceTable);
             this.Controls.Add(this.TransactionsMenu_Button);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BalanceListForm";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

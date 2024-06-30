@@ -19,6 +19,12 @@ namespace Bank_System
         {
             InitializeComponent();
         }
+        private int permission;
+        public WithdrawForm(int per)
+        {
+            InitializeComponent();
+            permission = per;
+        }
 
         clsClient Client = new clsClient();
 
@@ -63,7 +69,7 @@ namespace Bank_System
 
         private void TransactionMenu_Button_Click(object sender, EventArgs e)
         {
-            TransactionsForm form = new TransactionsForm();
+            TransactionsForm form = new TransactionsForm(permission);
             this.Hide();
             form.ShowDialog();
             this.Close();
