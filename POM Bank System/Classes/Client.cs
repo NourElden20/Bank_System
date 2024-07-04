@@ -71,6 +71,17 @@ namespace Bank_System.Classes
             set { balance = value; }
         }
 
+        /// <summary>
+        /// Converts a delimited string record into a <see cref="clsClient"/> object.
+        /// </summary>
+        /// <param name="Record">The delimited string record representing the client data.</param>
+        /// <param name="Delim">
+        /// The delimiter used to separate fields in the record. 
+        /// The default value is "#//#".
+        /// </param>
+        /// <returns>
+        /// A <see cref="clsClient"/> object populated with data from the record.
+        /// </returns>
         private clsClient ConvertRecordToClient(string Record, string Delim = "#//#")
         {
             string[] Fields = Record.Split(Delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
@@ -86,6 +97,17 @@ namespace Bank_System.Classes
             return Client;
         }
 
+        /// <summary>
+        /// Converts a <see cref="clsClient"/> object into a delimited string record.
+        /// </summary>
+        /// <param name="Client">The <see cref="clsClient"/> object containing the client data to be converted.</param>
+        /// <param name="Delim">
+        /// The delimiter used to separate fields in the resulting record.
+        /// The default value is "#//#".
+        /// </param>
+        /// <returns>
+        /// A delimited string record representing the client data.
+        /// </returns>
         private string ConvertClientDataToRecord(clsClient Client, string Delim = "#//#")
         {
             string Record = 
@@ -98,6 +120,14 @@ namespace Bank_System.Classes
             return Record;
         }
 
+        /// <summary>
+        /// Loads an index file into a sorted dictionary.
+        /// </summary>
+        /// <param name="FileName">The name of the index file to be loaded.</param>
+        /// <returns>
+        /// A <see cref="SortedDictionary{TKey, TValue}"/> containing the key-value pairs from the index file.
+        /// The key is the index key, and the value is the position.
+        /// </returns>
         private SortedDictionary<int, int> LoadIndexFileIntoDic(string FileName)
         {
             StreamReader sr = new StreamReader(FileName);
@@ -115,6 +145,17 @@ namespace Bank_System.Classes
             return ClientsDict;
         }
 
+        /// <summary>
+        /// Converts a delimited string record into an <see cref="IndexData"/> object.
+        /// </summary>
+        /// <param name="Record">The delimited string record representing the index data.</param>
+        /// <param name="Delim">
+        /// The delimiter used to separate fields in the record. 
+        /// The default value is "#//#".
+        /// </param>
+        /// <returns>
+        /// An <see cref="IndexData"/> object populated with the key and position from the record.
+        /// </returns>
         private IndexData ConvertIndexRecordToKeyValuePair(string Record, string Delim = "#//#")
         {
             IndexData indexData = new IndexData();
@@ -125,6 +166,15 @@ namespace Bank_System.Classes
             return indexData;
         }
 
+        /// <summary>
+        /// Adds a key and position to the index file.
+        /// </summary>
+        /// <param name="Key">The key to be added to the index file.</param>
+        /// <param name="Pos">The position associated with the key to be added to the index file.</param>
+        /// <param name="Delim">
+        /// The delimiter used to separate the key and position in the index file. 
+        /// The default value is "#//#".
+        /// </param>
         private void AddToIndexFile(int Key, int Pos, string Delim = "#//#")
         {
             if (File.Exists(IndexFileName))
@@ -144,6 +194,16 @@ namespace Bank_System.Classes
 
         }
 
+        /// <summary>
+        /// Updates the index file with the contents of a sorted dictionary.
+        /// </summary>
+        /// <param name="Dict">
+        /// The <see cref="SortedDictionary{TKey, TValue}"/> containing the key-value pairs to be written to the index file.
+        /// </param>
+        /// <param name="Delim">
+        /// The delimiter used to separate the key and value in the index file. 
+        /// The default value is "#//#".
+        /// </param>
         private void UpdateIndexFile(SortedDictionary<int, int> Dict, string Delim = "#//#")
         {
             StreamWriter streamWriter = new StreamWriter(IndexFileName);//Will overwrite the file automatically
@@ -155,6 +215,14 @@ namespace Bank_System.Classes
             streamWriter.Close();//Done!
         }
 
+        /// <summary>
+        /// Performs a binary search on a sorted array of integers to find a specified key.
+        /// </summary>
+        /// <param name="SearchArray">The sorted array of integers to search.</param>
+        /// <param name="Key">The key to search for in the array.</param>
+        /// <returns>
+        /// <c>true</c> if the key is found in the array; otherwise, <c>false</c>.
+        /// </returns>
         private bool BinarySearch(int[] SearchArray, int Key)
         {
             int Low = 0;
@@ -174,6 +242,13 @@ namespace Bank_System.Classes
             return false;//Not Founded!
         }
 
+        /// <summary>
+        /// Loads client data from a file into a list of <see cref="clsClient"/> objects.
+        /// </summary>
+        /// <param name="FileName">The name of the file containing client data.</param>
+        /// <returns>
+        /// A list of <see cref="clsClient"/> objects populated with data from the file.
+        /// </returns>
         private List<clsClient> LoadClientsDataFromFile(string FileName)
         {
             ClientsFile = new FileStream(FileName, FileMode.Open, FileAccess.Read);
@@ -196,6 +271,13 @@ namespace Bank_System.Classes
             return ClientsList;
         }
 
+        /// <summary>
+        /// Saves client data from a list of <see cref="clsClient"/> objects to a file.
+        /// </summary>
+        /// <param name="FileName">The name of the file to save the client data.</param>
+        /// <param name="ClientsList">
+        /// The list of <see cref="clsClient"/> objects containing the client data to be saved.
+        /// </param>
         private void SaveClientsDataToFile(string FileName, List<clsClient> ClientsList)
         {
             ClientsFile = new FileStream(FileName, FileMode.Truncate, FileAccess.Write);
@@ -215,6 +297,10 @@ namespace Bank_System.Classes
             ClientsFile.Close();
         }
 
+        /// <summary>
+        /// Marks a client record for deletion in the clients file.
+        /// </summary>
+        /// <param name="AccountID">The account ID of the client to mark for deletion.</param>
         private void MarkForDelete(string AccountID)
         {
 
