@@ -33,6 +33,9 @@ namespace Bank_System.Classes
             name = "";
             phonenumber = "";
             balance = 0.0;
+
+            //Load index at the start of the program 
+            ClientsDict = LoadIndexFileIntoDic(IndexFileName);
         }
 
         struct IndexData
@@ -406,8 +409,6 @@ namespace Bank_System.Classes
         public bool FindClientByAccountID(string AccountID, out clsClient Client)
         {
 
-            ClientsDict = LoadIndexFileIntoDic(IndexFileName);
-
             if (BinarySearch(ClientsDict.Keys.ToArray(), Convert.ToInt32(AccountID)))
             {
                 //Founded!
@@ -449,6 +450,9 @@ namespace Bank_System.Classes
 
                 //Delete Record From ClientsFile
                 SaveClientsDataToFile(ClientsFileName, ClientsList);
+
+                //Update the dictionary for the canges in the length of records!
+                UpdateDictionary();
 
                 //Delete the Record Key from Index FiLE
                 UpdateIndexFile(ClientsDict);
