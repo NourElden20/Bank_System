@@ -25,7 +25,13 @@ namespace Bank_System
             InitializeComponent();
             user = userId;
 
-            if (UserOperations.FillWithID(user).Permission.Equals("Low-Level"))
+            var userObj = UserOperations.FillWithID(user);
+            if (userObj == null)
+            {
+                return;
+            }
+
+            if (userObj.Permission.Equals("Low-Level"))
             {
                 ManageUsers_Button.Visible = false;
                 DeleteClient_Button.Visible = false;
@@ -33,7 +39,7 @@ namespace Bank_System
                 Logout_Button.Location = new Point(141, 453);
                 return;
             }
-            if (UserOperations.FillWithID(user).Permission.Equals("Mid-Level"))
+            if (userObj.Permission.Equals("Mid-Level"))
             {
                 ManageUsers_Button.Visible = false;
                 Logout_Button.Location = new Point(141, 453);

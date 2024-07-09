@@ -10,9 +10,7 @@ namespace Bank_System
     public class User 
     {
 
-        public static int id ;
-       
-
+        public static int id ; 
         public string ID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -45,8 +43,4 @@ namespace Bank_System
         }
        
     }
-
-    
-    
-
 }

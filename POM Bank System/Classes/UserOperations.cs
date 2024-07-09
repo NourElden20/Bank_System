@@ -16,7 +16,7 @@ namespace Bank_System.Classes
 
         public static void AddUser(User user)
         {
-            user.ID = User.id.ToString();
+            user.ID = (++User.id).ToString();
             MyFile.AddRecord(user, Path);
             UsersList.Add(user);
             MessageBox.Show("User Added Successfully!","Event!",MessageBoxButtons.OK, MessageBoxIcon.Information);
