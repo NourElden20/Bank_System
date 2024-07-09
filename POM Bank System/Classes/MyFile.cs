@@ -15,7 +15,7 @@ namespace Bank_System.Classes
         {
             FileStream fileStream = new FileStream(path, FileMode.Append, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
-            streamWriter.WriteLine(User.id + "|" + user.Username + "|" + user.Password + "|" + user.Permission );
+            streamWriter.WriteLine(user.ID + "|" + user.Username + "|" + user.Password + "|" + user.Permission );
             streamWriter.Close();
             fileStream.Close();
         }
@@ -131,7 +131,7 @@ namespace Bank_System.Classes
             FileStream myFile = new FileStream(UserOperations.Path, FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(myFile);
             string record;
-
+            int maxID = 0;
             //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
             while ((record = sr.ReadLine()) != null)
             {
@@ -139,13 +139,17 @@ namespace Bank_System.Classes
                 if (Fields[0].Trim() != "*") // We don't add deleted users to list
                 {
                     User user = new User(Fields.ToList());
-
                     UserOperations.UsersList.Add(user);
+                    int currentID = int.Parse(user.ID);
+                    if (currentID > maxID)
+                    {
+                        maxID = currentID;
+                    }
                 }
             }
+            User.id = maxID;
             sr.Close();
             myFile.Close();
         }
-
     }
 }
