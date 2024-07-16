@@ -1,1 +1,6 @@
 1|NourElden@gmail.com|123456789|Admin
+2|Ziad|12345678|Mid-Level
+3|Salem|asdfghjk|Low-Level
+*|ziadnasser22@gmail.com|80*The_One_And_Only*80|Low-Level
+5|ziadnasser22@gmail.com|80*The_One_And_Only*80|Low-Level
+6|ziadnasser888@gmail.com|80*The_One_And_Only*80|Mid-Level
