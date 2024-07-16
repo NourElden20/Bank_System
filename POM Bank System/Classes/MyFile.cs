@@ -77,10 +77,10 @@ namespace Bank_System.Classes
                 string SecondaryKey2 = user2.ID + user2.Username;
                 if (SecondaryKey == SecondaryKey2)
                 {
-                    user2.ID         =user.ID;
-                    user2.Username   =user.Username;
-                    user2.Password   =user.Password;
-                    user2.Permission =user.Permission;
+                    user2.ID         = user.ID;
+                    user2.Username   = user.Username;
+                    user2.Password   = user.Password;
+                    user2.Permission = user.Permission;
                
                     flag = true;
                     break;
