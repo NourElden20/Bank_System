@@ -319,6 +319,12 @@ namespace Bank_System.Classes
             ClientsFile.Close();
         }
 
+        /// <summary>
+        /// Updates the specified client in the list of clients if it exists.
+        /// </summary>
+        /// <param name="ClientsList">The list of clients to update.</param>
+        /// <param name="Client">The client containing updated information.</param>
+        /// <returns>The updated list of clients.</returns>
         private List<clsClient> UpdateClientsList(List<clsClient> ClientsList, clsClient Client)
         {
 
@@ -334,6 +340,9 @@ namespace Bank_System.Classes
             return ClientsList;
         }
 
+        /// <summary>
+        /// Updates the dictionary of client data positions based on the current client file.
+        /// </summary>
         private void UpdateDictionary()
         {
             ClientsDict.Clear();
@@ -361,11 +370,19 @@ namespace Bank_System.Classes
             ClientsFile.Close();
         }
 
+        /// <summary>
+        /// Retrieves a list of all clients from the client data file.
+        /// </summary>
+        /// <returns>A list of all clients.</returns>
         public List<clsClient> ShowAllClients()
         {
             return LoadClientsDataFromFile(ClientsFileName); 
         }
 
+        /// <summary>
+        /// Adds a new client to the client data file and updates the index.
+        /// </summary>
+        /// <param name="Client">The client to be added.</param>
         public void AddNewClient(clsClient Client)
         {
             int Pos;
@@ -406,6 +423,12 @@ namespace Bank_System.Classes
             }
         }
 
+        /// <summary>
+        /// Finds a client by their AccountID in the client data file.
+        /// </summary>
+        /// <param name="AccountID">The AccountID of the client to find.</param>
+        /// <param name="Client">The client object if found, otherwise null.</param>
+        /// <returns>True if the client is found, otherwise false.</returns>
         public bool FindClientByAccountID(string AccountID, out clsClient Client)
         {
 
@@ -433,6 +456,11 @@ namespace Bank_System.Classes
             return false;
         }
 
+        /// <summary>
+        /// Deletes a client by their AccountID from the client data file and updates the index.
+        /// </summary>
+        /// <param name="AccountID">The AccountID of the client to delete.</param>
+        /// <returns>True if the client is successfully deleted, otherwise false.</returns>
         public bool DeleteClient(string AccountID)
         {
             clsClient Client = new clsClient();
@@ -466,6 +494,12 @@ namespace Bank_System.Classes
             }
         }
 
+        /// <summary>
+        /// Updates a client's information in the client data file and updates the index.
+        /// </summary>
+        /// <param name="newClient">The client with updated information.</param>
+        /// <param name="dialogResult">The result of the confirmation dialog.</param>
+        /// <returns>True if the client is successfully updated, otherwise false.</returns>
         public bool UpdateClient(clsClient newClient, DialogResult dialogResult)
         {
             
@@ -494,6 +528,5 @@ namespace Bank_System.Classes
                 return false;
             }
         }
-
     }
 }
