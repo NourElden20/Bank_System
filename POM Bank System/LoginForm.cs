@@ -16,14 +16,14 @@ namespace Bank_System
         public Login_Form()
         {
             InitializeComponent();
-          
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
+        
         private void Login_Button_Click(object sender, EventArgs e)
         {
             string username = Username_TextBox.Text;
@@ -43,6 +43,20 @@ namespace Bank_System
             {
                 MessageBox.Show("Invalid username or password!", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+        }
+
+        private void Check_ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Check_ShowPass.Checked == false)
+            {
+                Password_TextBox.UseSystemPasswordChar = true;
+                Password_TextBox.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                Password_TextBox.UseSystemPasswordChar = false;
+                Password_TextBox.UseSystemPasswordChar = false;
             }
         }
     }

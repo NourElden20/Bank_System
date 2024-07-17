@@ -36,6 +36,7 @@
             this.Username_Label = new System.Windows.Forms.Label();
             this.Password_Label = new System.Windows.Forms.Label();
             this.h_pic = new System.Windows.Forms.PictureBox();
+            this.Check_ShowPass = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.h_pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,12 +215,22 @@
             this.h_pic.TabIndex = 12;
             this.h_pic.TabStop = false;
             // 
+            // Check_ShowPass
+            // 
+            this.Check_ShowPass.Location = new System.Drawing.Point(685, 273);
+            this.Check_ShowPass.Name = "Check_ShowPass";
+            this.Check_ShowPass.Size = new System.Drawing.Size(105, 20);
+            this.Check_ShowPass.TabIndex = 27;
+            this.Check_ShowPass.Values.Text = "ShowPassword";
+            this.Check_ShowPass.CheckedChanged += new System.EventHandler(this.Check_ShowPass_CheckedChanged);
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.Check_ShowPass);
             this.Controls.Add(this.Password_Label);
             this.Controls.Add(this.Username_Label);
             this.Controls.Add(this.Login_Button);
@@ -250,6 +261,7 @@
         public ComponentFactory.Krypton.Toolkit.KryptonButton Login_Button;
         public System.Windows.Forms.Label Username_Label;
         public System.Windows.Forms.Label Password_Label;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox Check_ShowPass;
     }
 }
 
