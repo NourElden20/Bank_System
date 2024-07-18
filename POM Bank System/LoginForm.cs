@@ -49,16 +49,21 @@ namespace Bank_System
 
         private void Check_ShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (Check_ShowPass.Checked == false)
+            Password_TextBox.PasswordChar = char.MinValue;
+            if (!Check_ShowPass.Checked  )
             {
                 Password_TextBox.UseSystemPasswordChar = true;
-                Password_TextBox.UseSystemPasswordChar = true;
+                
+
+
             }
-            else
+            else if( Check_ShowPass.Checked ) 
             {
-                Password_TextBox.UseSystemPasswordChar = false;
-                Password_TextBox.UseSystemPasswordChar = false;
+                Password_TextBox.UseSystemPasswordChar = false;  
+             
             }
         }
+
+        
     }
 }

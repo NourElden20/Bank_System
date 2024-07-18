@@ -109,6 +109,7 @@
             // 
             this.Password_TextBox.Location = new System.Drawing.Point(408, 239);
             this.Password_TextBox.Name = "Password_TextBox";
+            this.Password_TextBox.PasswordChar = '●';
             this.Password_TextBox.Size = new System.Drawing.Size(382, 28);
             this.Password_TextBox.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.Password_TextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -124,6 +125,7 @@
             this.Password_TextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Password_TextBox.TabIndex = 19;
             this.Password_TextBox.Text = "Password";
+            this.Password_TextBox.UseSystemPasswordChar = true;
             // 
             // Login_Button
             // 
@@ -219,9 +221,9 @@
             // 
             this.Check_ShowPass.Location = new System.Drawing.Point(685, 273);
             this.Check_ShowPass.Name = "Check_ShowPass";
-            this.Check_ShowPass.Size = new System.Drawing.Size(105, 20);
+            this.Check_ShowPass.Size = new System.Drawing.Size(108, 20);
             this.Check_ShowPass.TabIndex = 27;
-            this.Check_ShowPass.Values.Text = "ShowPassword";
+            this.Check_ShowPass.Values.Text = "Show Password";
             this.Check_ShowPass.CheckedChanged += new System.EventHandler(this.Check_ShowPass_CheckedChanged);
             // 
             // Login_Form
