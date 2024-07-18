@@ -15,18 +15,21 @@ namespace Bank_System
 {
     public partial class DeleteClientForm : KryptonForm
     {
-        private int permission;
-        public DeleteClientForm(int per)
+        User user;
+
+
+        public DeleteClientForm(User user)
         {
             InitializeComponent();
-            permission = per;
+          
+            this.user = user;
         }
 
         clsClient Client = new clsClient();
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -88,6 +91,11 @@ namespace Bank_System
             }
             else
                 MessageBox.Show($"Please eneter Client Id First to delete him", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void DeleteClientForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

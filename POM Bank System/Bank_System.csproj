@@ -91,7 +91,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserOperations.cs" />
-    <Compile Include="Classes\WorkingArea.cs" />
     <Compile Include="Client Forms\ClientListForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -541,6 +541,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Client Screen";
+            this.Load += new System.EventHandler(this.UpdatedClientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MM_pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

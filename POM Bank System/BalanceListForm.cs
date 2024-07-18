@@ -14,15 +14,16 @@ namespace Bank_System
 {
     public partial class BalanceListForm : KryptonForm
     {
+        User user;
         public BalanceListForm()
         {
             InitializeComponent();
         }
         private int permission;
-        public BalanceListForm(int per)
+        public BalanceListForm(User user)
         {
             InitializeComponent();
-            permission = per;
+           this.user = user;
         }
         private void BalanceListForm_Load(object sender, EventArgs e)
         {
@@ -45,7 +46,7 @@ namespace Bank_System
 
         private void TransactionsMenu_Button_Click(object sender, EventArgs e)
         {
-            TransactionsForm form = new TransactionsForm(permission);
+            TransactionsForm form = new TransactionsForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();

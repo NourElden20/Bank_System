@@ -6,188 +6,258 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Bank_System.Classes
 {
+    
+
+
     static class MyFile
     {
-        /// <summary>
-        /// Adds a record of the specified user to the specified file.
-        /// </summary>
-        /// <param name="user">The user object containing the details to be added.</param>
-        /// <param name="path">The path to the file where the record should be added.</param>
-        public static void AddRecord(User user,string path)
+        readonly private static string IndexFileName = @"UsersIndex.txt";
+        readonly public static string UsersFileName = @"Users.txt";
+        public static SortedDictionary<int, int> LoadIndexFileIntoDic(string FileName)
         {
-            FileStream fileStream = new FileStream(path, FileMode.Append, FileAccess.Write);
-            StreamWriter streamWriter = new StreamWriter(fileStream);
-            streamWriter.WriteLine(user.ID + "|" + user.Username + "|" + user.Password + "|" + user.Permission );
-            streamWriter.Close();
-            fileStream.Close();
-        }
+            StreamReader sr = new StreamReader(FileName);
+            IndexData indexData = new IndexData();
+            UserOperations.UsersDic.Clear();
+            string Line = "";
 
-        /// <summary>
-        /// Deletes a record of the specified user from the specified file.
-        /// </summary>
-        /// <param name="user">The user object containing the details to be deleted.</param>
-        /// <param name="Path">The path to the file from which the record should be deleted.</param>
-        public static void DeleteRecord(User user, string Path)
-        {
-            bool flag = false;
-            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.ReadWrite);
-            StreamReader sr = new StreamReader(myFile);
-            string record;
-            string SecondaryKey ="";
-            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
-            while ((record = sr.ReadLine()) != null)
+            while ((Line = sr.ReadLine()) != null)
             {
-                string[] Fields = record.Split('|');
-                if(user.ID == Fields[0] )
-                {
-                    SecondaryKey = Fields[0] + Fields[1];
-                    user.ID = "*";                       
-                    flag = true;
-                    break;
-                }
+                indexData = ConvertIndexRecordToKeyValuePair(Line);
+                UserOperations.UsersDic.Add(indexData.Key, indexData.Position);
             }
-            if(!flag) MessageBox.Show("User not found", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
             sr.Close();
-            myFile.Close();
-            if(flag)UpdateRecord( user, Path, SecondaryKey);
+            return UserOperations.UsersDic;
         }
 
         /// <summary>
-        /// Updates a record of the specified user in the specified file.
+        /// Converts a delimited string record into an <see cref="IndexData"/> object.
         /// </summary>
-        /// <param name="user">The user object containing the updated details.</param>
-        /// <param name="Path">The path to the file where the record should be updated.</param>
-        /// <param name="SecondaryKey">An optional secondary key used to identify the record to be updated.</param>
-        public static void UpdateRecord( User user, string Path, string SecondaryKey="")
+        /// <param name="Record">The delimited string record representing the index data.</param>
+        /// <param name="Delim">
+        /// The delimiter used to separate fields in the record. 
+        /// The default value is "#//#".
+        /// </param>
+        /// <returns>
+        /// An <see cref="IndexData"/> object populated with the key and position from the record.
+        /// </returns>
+        public static IndexData ConvertIndexRecordToKeyValuePair(string Record, string Delim = "#//#")
         {
-            bool flag = false;
-            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(myFile);
-            string record;
-            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
-            while ((record = sr.ReadLine()) != null)
-            {
-                string[] Fields = record.Split('|');
-                User user2 = new User(Fields.ToList());
-               
-                string SecondaryKey2 = user2.ID + user2.Username;
-                if (SecondaryKey == SecondaryKey2)
-                {
-                    user2.ID         = user.ID;
-                    user2.Username   = user.Username;
-                    user2.Password   = user.Password;
-                    user2.Permission = user.Permission;
-               
-                    flag = true;
-                    break;
-                }
-            }
-           
-            if (!flag) MessageBox.Show("User not found", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            IndexData indexData = new IndexData();
+            string[] Fields = Record.Split(Delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            indexData.Key = Convert.ToInt32(Fields[0]);
+            indexData.Position = Convert.ToInt32(Fields[1]);
+
+            return indexData;
+        }
+
+        /// <summary>
+        /// Adds a key and position to the index file.
+        /// </summary>
+        /// <param name="Key">The key to be added to the index file.</param>
+        /// <param name="Pos">The position associated with the key to be added to the index file.</param>
+        /// <param name="Delim">
+        /// The delimiter used to separate the key and position in the index file. 
+        /// The default value is "#//#".
+        /// </param>
+        public static void AddToIndexFile(int Key, int Pos, string Delim = "#//#")
+        {
             
-            sr.Close();
-            myFile.Close();
-               
-            
-            CreateFile(Path);
+            if (File.Exists(IndexFileName))
+            {
+                FileStream IndexFile = new FileStream(IndexFileName, FileMode.Append, FileAccess.Write);
+                StreamWriter MyStreamWriter = new StreamWriter(IndexFile);
+
+                MyStreamWriter.WriteLine(Key + Delim + Pos);
+
+                MyStreamWriter.Close();
+                IndexFile.Close();
+            }
+            else
+            {
+                MessageBox.Show("The Index File Not Available!");
+            }
+
         }
 
         /// <summary>
-        /// Searches for a record with the specified ID in the specified file.
+        /// Updates the index file with the contents of a sorted dictionary.
         /// </summary>
-        /// <param name="id">The ID of the record to search for.</param>
-        /// <param name="Path">The path to the file where the search should be conducted.</param>
-        /// <returns>Returns <c>true</c> if a record with the specified ID is found; otherwise, <c>false</c>.</returns>
-        private static bool Search(int id,string Path)
+        /// <param name="Dict">
+        /// The <see cref="SortedDictionary{TKey, TValue}"/> containing the key-value pairs to be written to the index file.
+        /// </param>
+        /// <param name="Delim">
+        /// The delimiter used to separate the key and value in the index file. 
+        /// The default value is "#//#".
+        /// </param>
+        public static void UpdateIndexFile(SortedDictionary<int, int> Dict, string Delim = "#//#")
         {
-            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(myFile);
-            string record;
-            while ((record = sr.ReadLine()) != null)
+            StreamWriter streamWriter = new StreamWriter(IndexFileName);//Will overwrite the file automatically
+
+            foreach (KeyValuePair<int, int> item in Dict)
             {
-                string[] Fields = record.Split('|');
-                if (Fields[0] == id.ToString())
+                streamWriter.WriteLine(item.Key + Delim + item.Value);
+            }
+            streamWriter.Close();//Done!
+        }
+
+        public static void MarkForDelete(string key)
+        {
+
+            using (FileStream UsersFile = new FileStream(UsersFileName, FileMode.Open, FileAccess.ReadWrite))
+            {
+                using (StreamWriter MyStreamWriter = new StreamWriter(UsersFile))
                 {
-                    return true;
+
+                    int Position = UserOperations.UsersDic[Convert.ToInt32(key)];
+
+                    UsersFile.Seek(Position, SeekOrigin.Begin);
+                    MyStreamWriter.Write("*");
+
                 }
             }
-            sr.Close();
-            myFile.Close();
-            return false;
         }
 
+
         /// <summary>
-        /// Loads the content of the specified file and displays it in the specified TextBox.
+        /// Updates the specified user in the list of users if it exists.
         /// </summary>
-        /// <param name="Path">The path to the file to be loaded.</param>
-        /// <param name="Place">The TextBox where the file content will be displayed.</param>
-        /// <returns>Returns the text displayed in the TextBox after loading the file content.</returns>
-        public static string LoadFile(string Path, TextBox Place)
+        /// <param name="userlist">The list of clients to update.</param>
+        /// <param name="user">The user containing updated information.</param>
+        /// <returns>The updated list of users.</returns>
+        public static List<User> UpdateUsersList(List<User> userlist, User user)
         {
-            Place.Text = "ID\r\t|\r\tUsername\r\t|\rPassword\r\t|\rPermission\r\n\r\n";
-            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(myFile);
-            string record;
-            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
-            while ((record = sr.ReadLine()) != null)
+            for (int i = 0; i < userlist.Count; i++)
             {
-                string[] Fields = record.Split('|');
-                Place.Text += Fields[0] + "\r\t|\r\t" + Fields[1] + "\r\t|\r\t" + Fields[2] + "\r\t|\r\t" + Fields[3] + "\r\t|\r\t" + double.Parse(Fields[4]) + "\r\t|\r\t" + int.Parse(Fields[5]) + "\r\n";
-                
-            }
-            sr.Close();
-            myFile.Close();
-            return Place.Text;
-
-        }
-
-        /// <summary>
-        /// Creates a new file at the specified path and writes the user records from the UsersList.
-        /// </summary>
-        /// <param name="Path">The path where the new file will be created.</param>
-        private static void CreateFile(string Path)
-        {
-            FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
-            StreamWriter streamWriter = new StreamWriter(fileStream);
-            foreach (User user in UserOperations.UsersList)
-            {              
-                streamWriter.WriteLine(user.ID + "|" + user.Username + "|" + user.Password + "|" + user.Permission);
-            }
-            streamWriter.Close();
-            fileStream.Close();
-        }
-
-        /// <summary>
-        /// Loads users from the file specified in UserOperations.Path into the UsersList.
-        /// </summary>
-        public static void LoadUsersFromFileToList()
-        {
-            FileStream myFile = new FileStream(UserOperations.Path, FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(myFile);
-            string record;
-            int maxID = 0;
-            //Example of User attributes : ID 0 | Username 1 | Password 2 | Permission 3 (As Written in file)
-            while ((record = sr.ReadLine()) != null)
-            {
-                string[] Fields = record.Split('|');
-                if (Fields[0].Trim() != "*") // We don't add deleted users to list
+                if (user.ID == userlist[i].ID)
                 {
-                    User user = new User(Fields.ToList());
-                    UserOperations.UsersList.Add(user);
-                    int currentID = int.Parse(user.ID);
-                    if (currentID > maxID)
-                    {
-                        maxID = currentID;
-                    }
+                    userlist[i] = user;//Updated!
+                    break;// No need Keep iterating on the List
                 }
             }
-            User.id = maxID;
-            sr.Close();
-            myFile.Close();
+
+            return userlist;
+        }
+
+        /// <summary>
+        /// Updates the dictionary of Users data positions based on the current users file.
+        /// </summary>
+        public static void UpdateDictionary(SortedDictionary<int,int> Dic)
+        {
+            Dic.Clear();
+            FileStream UsersFile = new FileStream(UsersFileName, FileMode.Open, FileAccess.Read);
+            StreamReader MyStreamReader = new StreamReader(UsersFile);
+
+            string Line;
+            User user;
+
+            IndexData Index_Data = new IndexData();
+
+            Index_Data.Position = 0;
+            while ((Line = MyStreamReader.ReadLine()) != null)
+            {
+                user = ConvertRecordToUser(Line);
+
+                Index_Data.Key = Convert.ToInt32(user.ID);
+
+                Dic.Add(Index_Data.Key, Index_Data.Position);
+
+                Index_Data.Position += Line.Length + 2;
+            }
+
+            MyStreamReader.Close();
+            UsersFile.Close();
+        }
+
+        public static User ConvertRecordToUser(string Record, string Delim = "#//#")
+        {
+            string[] Fields = Record.Split(Delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+            User user = new User()
+            {
+                ID = Fields[0],
+                Username = Fields[1],
+                Password = Fields[2],
+                Permission = Fields[3]
+            };
+
+            return user;
+        }
+        public static List<User> ShowAllUsers()
+        {
+            return LoadUsersDataFromFile(UsersFileName);
+        }
+
+        /// <summary>
+        /// Loads client data from a file into a list of <see cref="clsClient"/> objects.
+        /// </summary>
+        /// <param name="FileName">The name of the file containing client data.</param>
+        /// <returns>
+        /// A list of <see cref="clsClient"/> objects populated with data from the file.
+        /// </returns>
+        public static List<User> LoadUsersDataFromFile(string FileName)
+        {
+            FileStream UsersFile = new FileStream(FileName, FileMode.Open, FileAccess.Read);
+            StreamReader MyStreamReader = new StreamReader(UsersFile);
+
+            List<User> UsersList = new List<User>();
+            User user;
+
+            string Record;
+
+            while ((Record = MyStreamReader.ReadLine()) != null)
+            {
+                user = ConvertRecordToUser(Record);
+                UsersList.Add(user);
+            }
+
+            MyStreamReader.Close();
+            UsersFile.Close();
+            return UsersList;
+        }
+        /// <summary>
+        /// Saves client data from a list of <see cref="clsClient"/> objects to a file.
+        /// </summary>
+        /// <param name="FileName">The name of the file to save the client data.</param>
+        /// <param name="ClientsList">
+        /// The list of <see cref="clsClient"/> objects containing the client data to be saved.
+        /// </param>
+        public static void SaveUsersDataToFile(string FileName, List<User> UsersList)
+        {
+            FileStream ClientsFile = new FileStream(FileName, FileMode.Truncate, FileAccess.Write);
+            StreamWriter MyStreamWriter = new StreamWriter(ClientsFile);
+
+            foreach (User user in UsersList)
+            {
+                if (user.ID != "*")// if true then it's not deleted
+                {
+                    string Record = ConvertUsersDataToRecord(user);
+
+                    MyStreamWriter.WriteLine(Record);
+                }
+            }
+
+            MyStreamWriter.Close();
+            ClientsFile.Close();
+        }
+        public static string ConvertUsersDataToRecord(User user, string Delim = "#//#")
+        {
+            string Record =
+                user.ID + Delim +
+                user.Username + Delim +
+                user.Password + Delim +
+                user.Permission;
+
+            return Record;
+        }
+        public struct IndexData
+        {
+            public int Key;
+            public int Position;
         }
     }
 }

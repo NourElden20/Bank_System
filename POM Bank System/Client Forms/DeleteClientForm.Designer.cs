@@ -440,6 +440,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete Client Screen";
+            this.Load += new System.EventHandler(this.DeleteClientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MM_pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

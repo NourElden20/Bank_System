@@ -15,15 +15,16 @@ namespace Bank_System
 {
     public partial class WithdrawForm : KryptonForm
     {
+        User user;
         public WithdrawForm()
         {
             InitializeComponent();
         }
         private int permission;
-        public WithdrawForm(int per)
+        public WithdrawForm(User user)
         {
             InitializeComponent();
-            permission = per;
+            this.user = user;
         }
 
         clsClient Client = new clsClient();
@@ -69,7 +70,7 @@ namespace Bank_System
 
         private void TransactionMenu_Button_Click(object sender, EventArgs e)
         {
-            TransactionsForm form = new TransactionsForm(permission);
+            TransactionsForm form = new TransactionsForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();

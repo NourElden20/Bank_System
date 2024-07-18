@@ -15,10 +15,11 @@ namespace Bank_System
     public partial class UpdatedClientForm : KryptonForm
     {
         private int permission;
-        public UpdatedClientForm(int per)
+        User user;
+        public UpdatedClientForm(User user)
         {
             InitializeComponent();
-            permission = per;
+            this.user = user;
         }
 
         clsClient Client = new clsClient();
@@ -60,7 +61,7 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -133,5 +134,9 @@ namespace Bank_System
             Client.Balance = Convert.ToDouble(New_Account_Balance_TextBox.Text);
         }
 
+        private void UpdatedClientForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

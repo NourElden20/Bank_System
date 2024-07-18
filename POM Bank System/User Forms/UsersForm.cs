@@ -14,24 +14,17 @@ namespace Bank_System
 {
     public partial class UsersForm : KryptonForm
     {
-        public UsersForm()
+        User user;
+        public UsersForm(User user)
         {
             InitializeComponent();
-            UserOperations.UsersList.Clear();
-            UserOperations.LoadUsersFromFile();
-            User.id = int.Parse(UserOperations.UsersList.Last().ID);
-            User.id++;
+         this.user = user;
+                
         }
-
-        private int permission;
-        public UsersForm(int per)
-        {
-            InitializeComponent();
-            permission = per;
-        }
+        
         private void AddNewUser_Button_Click(object sender, EventArgs e)
         {
-            NewUserForm form = new NewUserForm();
+            NewUserForm form = new NewUserForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -40,7 +33,7 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -48,7 +41,7 @@ namespace Bank_System
 
         private void ListUsers_Button_Click(object sender, EventArgs e)
         {
-            UsersListForm form = new UsersListForm();
+            UsersListForm form = new UsersListForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -56,7 +49,7 @@ namespace Bank_System
 
         private void DeleteUser_Button_Click(object sender, EventArgs e)
         {
-            DeleteUserForm form = new DeleteUserForm();
+            DeleteUserForm form = new DeleteUserForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();

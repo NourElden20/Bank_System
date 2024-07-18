@@ -18,8 +18,8 @@ namespace Bank_System
 
         public User(string Username ,string Password, string Permission)
         {
-            this.Username = Username;
-            this.Password = Password;
+            this.Username   = Username;
+            this.Password   = Password;
             this.Permission = Permission;
         }
         public User(List<string> list)
@@ -31,14 +31,14 @@ namespace Bank_System
         }
         public User(User user)
         {
-            Username =   user.Username;
-            Password =   user.Password;
-            Permission = user.Permission;
+            Username   =   user.Username;
+            Password   =   user.Password;
+            Permission =   user.Permission;
         }
         public User()
         {
-            Username = string.Empty; 
-            Password = string.Empty;
+            Username   = string.Empty; 
+            Password   = string.Empty;
             Permission = string.Empty;
         }
        

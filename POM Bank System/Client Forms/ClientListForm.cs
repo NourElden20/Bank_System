@@ -14,16 +14,16 @@ namespace Bank_System
 {
     public partial class ClientListForm : KryptonForm
     {
-        private int permission;
-        public ClientListForm(int per)
+        User user;
+        public ClientListForm(User user)
         {
             InitializeComponent();
-            permission = per;
+            this.user = user;
         }
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -31,7 +31,7 @@ namespace Bank_System
 
         private void ClientListForm_Load(object sender, EventArgs e)
         {
-            clsClient Client = new clsClient();
+           clsClient Client = new clsClient();
 
             List<clsClient> ClientsList = Client.ShowAllClients();
 

@@ -44,35 +44,18 @@ namespace Bank_System.Classes
             public int Position;
         }
 
-        public string AccountID
-        {
-            get { return accountID; }
-            set { accountID = value; }
-        }
+        public string AccountID { get; set; }
+      
+        public string PINCode { get; set; }
+       
 
-        public string PINCode
-        {
-            get { return pinCode; }
-            set { pinCode = value; }
-        }
+        public string Name { get; set; }
+       
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public string PhoneNumber
-        {
-            get { return phonenumber; }
-            set { phonenumber = value; }
-        }
-
-        public double Balance
-        {
-            get { return balance; }
-            set { balance = value; }
-        }
+        public string PhoneNumber { get; set; }
+       
+        public double Balance { get;set; }
+        
 
         /// <summary>
         /// Converts a delimited string record into a <see cref="clsClient"/> object.
@@ -89,13 +72,14 @@ namespace Bank_System.Classes
         {
             string[] Fields = Record.Split(Delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
-            clsClient Client = new clsClient();
-            Client.AccountID = Fields[0];
-            Client.PINCode = Fields[1];
-            Client.Name = Fields[2];
-            Client.PhoneNumber = Fields[3];
-            Client.Balance = Convert.ToDouble(Fields[4]);
-
+            clsClient Client = new clsClient()
+            {
+                AccountID = Fields[0],
+                PINCode = Fields[1],
+                Name = Fields[2],
+                PhoneNumber = Fields[3],
+                Balance = Convert.ToDouble(Fields[4])
+            };
 
             return Client;
         }
@@ -467,7 +451,7 @@ namespace Bank_System.Classes
             ClientsDict = LoadIndexFileIntoDic(IndexFileName);
 
             // Prompt the user for confirmation
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Clint", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Client", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
                 MarkForDelete(AccountID);

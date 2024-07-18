@@ -90,7 +90,7 @@
             // ManageUsersMenu_Button
             // 
             this.ManageUsersMenu_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ManageUsersMenu_Button.Location = new System.Drawing.Point(12, 382);
+            this.ManageUsersMenu_Button.Location = new System.Drawing.Point(12, 449);
             this.ManageUsersMenu_Button.Name = "ManageUsersMenu_Button";
             this.ManageUsersMenu_Button.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
             this.ManageUsersMenu_Button.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(138)))), ((int)(((byte)(42)))));
@@ -178,7 +178,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.UsersTable.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.UsersTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.UsersTable.Size = new System.Drawing.Size(763, 364);
+            this.UsersTable.Size = new System.Drawing.Size(1037, 431);
             this.UsersTable.StateCommon.Background.Color1 = System.Drawing.Color.Transparent;
             this.UsersTable.StateCommon.Background.Color2 = System.Drawing.Color.Transparent;
             this.UsersTable.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
@@ -239,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 473);
+            this.ClientSize = new System.Drawing.Size(1084, 551);
             this.Controls.Add(this.UsersTable);
             this.Controls.Add(this.ManageUsersMenu_Button);
             this.Name = "UsersListForm";

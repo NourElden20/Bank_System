@@ -12,11 +12,11 @@ namespace Bank_System
 {
     public partial class TransactionsForm : KryptonForm
     {
-        private int permission;
-        public TransactionsForm(int per)
+        User user;
+        public TransactionsForm(User user)
         {
             InitializeComponent();
-            permission = per;
+            this.user = user;
         }
 
         private void Transactions_Form_Load(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace Bank_System
 
         private void Deposit_Button_Click(object sender, EventArgs e)
         {
-            DepositForm form = new DepositForm(permission);
+            DepositForm form = new DepositForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -34,7 +34,7 @@ namespace Bank_System
 
         private void Withdraw_Button_Click(object sender, EventArgs e)
         {
-            WithdrawForm form = new WithdrawForm(permission);
+            WithdrawForm form = new WithdrawForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -42,7 +42,7 @@ namespace Bank_System
 
         private void ShowBalance_Button_Click(object sender, EventArgs e)
         {
-            BalanceListForm form = new BalanceListForm(permission);
+            BalanceListForm form = new BalanceListForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -50,7 +50,7 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();

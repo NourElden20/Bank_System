@@ -173,11 +173,11 @@
             // 
             this.Title_AddingUser_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.Title_AddingUser_Label.AutoSize = true;
-            this.Title_AddingUser_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title_AddingUser_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title_AddingUser_Label.Location = new System.Drawing.Point(148, 45);
             this.Title_AddingUser_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Title_AddingUser_Label.Name = "Title_AddingUser_Label";
-            this.Title_AddingUser_Label.Size = new System.Drawing.Size(243, 36);
+            this.Title_AddingUser_Label.Size = new System.Drawing.Size(240, 31);
             this.Title_AddingUser_Label.TabIndex = 43;
             this.Title_AddingUser_Label.Text = "Adding New User";
             // 
@@ -466,6 +466,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.NewUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.U_pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBox_UserLevel.Panel)).EndInit();
             this.GrpBox_UserLevel.Panel.ResumeLayout(false);

@@ -98,11 +98,11 @@
             // 
             this.User_Details_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
             this.User_Details_Label.AutoSize = true;
-            this.User_Details_Label.Font = new System.Drawing.Font("Roboto Slab", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User_Details_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User_Details_Label.Location = new System.Drawing.Point(156, 59);
             this.User_Details_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.User_Details_Label.Name = "User_Details_Label";
-            this.User_Details_Label.Size = new System.Drawing.Size(186, 36);
+            this.User_Details_Label.Size = new System.Drawing.Size(192, 31);
             this.User_Details_Label.TabIndex = 43;
             this.User_Details_Label.Text = "User Details :";
             // 
@@ -270,6 +270,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete User Screen";
+            this.Load += new System.EventHandler(this.DeleteUserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

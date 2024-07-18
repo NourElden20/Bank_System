@@ -16,25 +16,26 @@ namespace Bank_System
         public Login_Form()
         {
             InitializeComponent();
-           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
         
         private void Login_Button_Click(object sender, EventArgs e)
         {
+            UserOperations U = new UserOperations();
+
             string username = Username_TextBox.Text;
             string password = Password_TextBox.Text;
-            MyFile.LoadUsersFromFileToList();
-            int userID = UserOperations.FindUsers(username, password);
 
-            if (userID != -1)
+            User user = U.FindUserByName(username);
+
+            if (user != null)
             {
+                MainMenuForm form = new MainMenuForm(user);
                 this.Hide();
-                MainMenuForm form = new MainMenuForm(userID);
                 form.ShowDialog();
                 this.Close();
                 return;

@@ -14,11 +14,12 @@ namespace Bank_System
 {
     public partial class NewClientForm : KryptonForm
     {
-        private int permission;
-        public NewClientForm(int per)
+        User user;
+        public NewClientForm(User user)
         {
             InitializeComponent();
-            permission = per;
+            
+            this.user = user;
         }
         private void Account_Number_TextBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -64,7 +65,7 @@ namespace Bank_System
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();

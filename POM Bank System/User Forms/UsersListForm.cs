@@ -13,17 +13,20 @@ namespace Bank_System
 {
     public partial class UsersListForm : KryptonForm
     {
-        public UsersListForm()
+        User user;
+        public UsersListForm(User user)
         {
             InitializeComponent();
-            userBindingSource.Clear();
-            foreach (var user in UserOperations.UsersList)
-                userBindingSource.Add(user);
+            this.user = user;
+           
         }
 
         private void UsersListForm_Load(object sender, EventArgs e)
         {
-            
+           
+            List<User> Users = MyFile.ShowAllUsers();
+            foreach (var Entry in Users)
+                userBindingSource.Add(user);
         }
 
        
@@ -31,7 +34,7 @@ namespace Bank_System
 
         private void ManageUsersMenu_Button_Click(object sender, EventArgs e)
         {
-            UsersForm form = new UsersForm();
+            UsersForm form = new UsersForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();

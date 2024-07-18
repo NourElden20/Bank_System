@@ -15,16 +15,16 @@ namespace Bank_System
 {
     public partial class FindClientForm : KryptonForm
     {
-        private int permission;
-        public FindClientForm(int per)
+        User user;
+        public FindClientForm(User user)
         {
             InitializeComponent();
-            permission = per;
+            this.user = user;
         }
 
         private void MainMenu_Button_Click(object sender, EventArgs e)
         {
-            MainMenuForm form = new MainMenuForm(permission);
+            MainMenuForm form = new MainMenuForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -57,7 +57,12 @@ namespace Bank_System
             }
 
             //Not Founded!
-            MessageBox.Show($"Client with Account Number: {AccountId} is Not founded!", "Client dosen't exists", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show($"Client with Account Number: {AccountId} is Not founded!", "Client doesn't exists", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void FindClientForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

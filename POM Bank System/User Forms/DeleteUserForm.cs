@@ -14,14 +14,16 @@ namespace Bank_System
 {
     public partial class DeleteUserForm : KryptonForm
     {
-        public DeleteUserForm()
+        User user;
+        public DeleteUserForm(User user)
         {
             InitializeComponent();
+            this.user = user;
         }
       
         private void UsersMenu_Button_Click(object sender, EventArgs e)
         {
-            UsersForm form = new UsersForm();
+            UsersForm form = new UsersForm(user);
             this.Hide();
             form.ShowDialog();
             this.Close();
@@ -29,16 +31,22 @@ namespace Bank_System
 
         private void Delete_Button_Click(object sender, EventArgs e)
         {
-            var id = UserOperations.FindUsers(username_DetailsTextBox.Text, password_TextBox.Text);
-            if (id != -1)
-            {
-                User user = UserOperations.FillWithID(id);
-                UserOperations.RemoveUser(user);
+            UserOperations U = new UserOperations();
+
+            User ToDelete = U.FindUserByName(username_DetailsTextBox.Text);
+            if (ToDelete != null)
+            {              
+                U.DeleteUser(ToDelete.ID);
             }
             else
             {
               MessageBox.Show("User not found", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
+        }
+
+        private void DeleteUserForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

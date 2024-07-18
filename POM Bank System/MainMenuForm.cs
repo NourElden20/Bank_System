@@ -13,25 +13,18 @@ namespace Bank_System
 {
     public partial class MainMenuForm : KryptonForm
     {
-
+        User user;
+        
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
 
         }
-
-        private int user;
-        public MainMenuForm(int userId)
+     
+        public MainMenuForm(User user)
         {
             InitializeComponent();
-            user = userId;
-
-            var userObj = UserOperations.FillWithID(user);
-            if (userObj == null)
-            {
-                return;
-            }
-
-            if (userObj.Permission.Equals("Low-Level"))
+            this.user = user;
+            if (user.Permission.Equals("Low-Level"))
             {
                 ManageUsers_Button.Visible = false;
                 DeleteClient_Button.Visible = false;
@@ -39,7 +32,7 @@ namespace Bank_System
                 Logout_Button.Location = new Point(141, 453);
                 return;
             }
-            if (userObj.Permission.Equals("Mid-Level"))
+            if (user.Permission.Equals("Mid-Level"))
             {
                 ManageUsers_Button.Visible = false;
                 Logout_Button.Location = new Point(141, 453);
