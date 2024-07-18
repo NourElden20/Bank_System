@@ -26,13 +26,15 @@ namespace Bank_System
            
             List<User> Users = MyFile.ShowAllUsers();
             foreach (var Entry in Users)
-                userBindingSource.Add(user);
+            {
+                userBindingSource.Add(Entry);
+            }
         }
 
-       
-        
 
-        private void ManageUsersMenu_Button_Click(object sender, EventArgs e)
+
+
+            private void ManageUsersMenu_Button_Click(object sender, EventArgs e)
         {
             UsersForm form = new UsersForm(user);
             this.Hide();
