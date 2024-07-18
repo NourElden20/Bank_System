@@ -246,6 +246,7 @@ namespace Bank_System.Classes
         }
         public static string ConvertUsersDataToRecord(User user, string Delim = "#//#")
         {
+          
             string Record =
                 user.ID + Delim +
                 user.Username + Delim +

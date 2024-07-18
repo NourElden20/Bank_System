@@ -367,6 +367,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POM Bank - Users";
+            this.Load += new System.EventHandler(this.UsersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.U_pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -86,13 +86,14 @@ namespace Bank_System
                 return null;
             }
 
-            clsClient Client = new clsClient();
-            Client.AccountID = Account_Number_TextBox.Text;
-            Client.PINCode = PINCode_TextBox.Text;
-            Client.Name = Client_Name_TextBox.Text;
-            Client.PhoneNumber = Client_Phone_TextBox.Text;
-            Client.Balance = Convert.ToDouble(Account_Balance_TextBox.Text);
-
+            clsClient Client = new clsClient()
+            {
+                AccountID = Account_Number_TextBox.Text,
+                PINCode = PINCode_TextBox.Text,
+                Name = Client_Name_TextBox.Text,
+                PhoneNumber = Client_Phone_TextBox.Text,
+                Balance = Convert.ToDouble(Account_Balance_TextBox.Text)
+            };
             return Client;
         }
 

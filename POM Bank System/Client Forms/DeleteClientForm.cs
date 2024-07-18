@@ -90,7 +90,7 @@ namespace Bank_System
                 ClearForm();
             }
             else
-                MessageBox.Show($"Please eneter Client Id First to delete him", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Please enter Client Id First to delete him", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void DeleteClientForm_Load(object sender, EventArgs e)

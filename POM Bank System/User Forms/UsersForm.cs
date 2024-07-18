@@ -55,7 +55,10 @@ namespace Bank_System
             this.Close();
         }
 
-        
+        private void UsersForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

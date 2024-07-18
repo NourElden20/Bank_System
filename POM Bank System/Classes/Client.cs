@@ -375,7 +375,8 @@ namespace Bank_System.Classes
             ClientsDict = LoadIndexFileIntoDic(IndexFileName);
 
             //ContainsKey Method Look for the Specified Key In the Dic
-            if (!ClientsDict.ContainsKey(Convert.ToInt32(Client.accountID)))
+            int key = int.Parse(Client.AccountID);
+            if (!ClientsDict.ContainsKey(key))
             {
                 //Founded!
                 ClientsFile = new FileStream(ClientsFileName, FileMode.Open, FileAccess.Write);

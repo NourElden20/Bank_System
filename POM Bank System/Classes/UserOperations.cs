@@ -25,14 +25,15 @@ namespace Bank_System.Classes
         {
             int Pos;
             int KeyValue;
-
+            UsersDic.Clear();
             UsersDic = MyFile.LoadIndexFileIntoDic(IndexFileName);
-
+            int id = UsersDic.Count() + 1;
+            user.ID = id.ToString();
             //ContainsKey Method Look for the Specified Key In the Dic
-            if (!UsersDic.ContainsKey(Convert.ToInt32(user.ID)))
+            if (!UsersDic.ContainsKey(id))
             {
                 //Founded!
-                using (FileStream UsersFile = new FileStream(UsersFileName, FileMode.Open, FileAccess.Write))
+                using (FileStream UsersFile = new FileStream(UsersFileName, FileMode.Append, FileAccess.Write))
                 {
                     using (StreamWriter MyStreamWriter = new StreamWriter(UsersFile))
                     {
@@ -52,14 +53,14 @@ namespace Bank_System.Classes
 
                 MyFile.AddToIndexFile(KeyValue, Pos);// Update the Index File With the new Record
 
-                MessageBox.Show($"Client {user.ID} Added successfully!", "User Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"User {user.Username} Added successfully!", "User Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
             else
             {
                 //Not Found!
-                MessageBox.Show($"Client With Account Number: {user.ID}, is Already Exists!", "Warning!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show($"User With ID Number: {user.ID}, is Already Exists!", "Warning!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
         }
 

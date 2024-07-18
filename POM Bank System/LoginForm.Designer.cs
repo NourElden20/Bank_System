@@ -103,7 +103,7 @@
             this.Username_TextBox.StateCommon.Content.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username_TextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Username_TextBox.TabIndex = 18;
-            this.Username_TextBox.Text = "username";
+            this.Username_TextBox.Text = "NourElden@gmail.com";
             // 
             // Password_TextBox
             // 
@@ -124,7 +124,7 @@
             this.Password_TextBox.StateCommon.Content.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password_TextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Password_TextBox.TabIndex = 19;
-            this.Password_TextBox.Text = "Password";
+            this.Password_TextBox.Text = "123456789";
             this.Password_TextBox.UseSystemPasswordChar = true;
             // 
             // Login_Button

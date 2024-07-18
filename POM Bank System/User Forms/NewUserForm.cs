@@ -86,6 +86,7 @@ namespace Bank_System
                     return;
                 }
             }
+            
             U.AddNewUser(newUser);
         }
         private bool CheckIFFieldsEmpty()
