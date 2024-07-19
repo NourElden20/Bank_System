@@ -18,6 +18,7 @@ namespace Bank_System
         public NewUserForm(User user)
         {
             InitializeComponent();
+            this.user = user;
         }
         
 

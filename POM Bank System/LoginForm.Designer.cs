@@ -103,7 +103,7 @@
             this.Username_TextBox.StateCommon.Content.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username_TextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Username_TextBox.TabIndex = 18;
-            this.Username_TextBox.Text = "NourElden@gmail.com";
+            this.Username_TextBox.Text = "Username";
             // 
             // Password_TextBox
             // 

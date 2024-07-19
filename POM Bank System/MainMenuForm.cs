@@ -12,8 +12,8 @@ using ComponentFactory.Krypton.Toolkit;
 namespace Bank_System
 {
     public partial class MainMenuForm : KryptonForm
-    {
-        User user;
+    {User user;
+        
         
         private void MainMenuForm_Load(object sender, EventArgs e)
         {

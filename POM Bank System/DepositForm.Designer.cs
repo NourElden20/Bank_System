@@ -306,7 +306,6 @@
             this.Deposit_TextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.Deposit_TextBox.Location = new System.Drawing.Point(291, 531);
             this.Deposit_TextBox.Name = "Deposit_TextBox";
-            this.Deposit_TextBox.ReadOnly = true;
             this.Deposit_TextBox.Size = new System.Drawing.Size(193, 23);
             this.Deposit_TextBox.TabIndex = 50;
             // 
@@ -383,6 +382,7 @@
             // 
             this.NewBalance_TextBox.Location = new System.Drawing.Point(291, 646);
             this.NewBalance_TextBox.Name = "NewBalance_TextBox";
+            this.NewBalance_TextBox.ReadOnly = true;
             this.NewBalance_TextBox.Size = new System.Drawing.Size(193, 23);
             this.NewBalance_TextBox.TabIndex = 50;
             // 

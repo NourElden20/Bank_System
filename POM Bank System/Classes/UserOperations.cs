@@ -25,15 +25,16 @@ namespace Bank_System.Classes
         {
             int Pos;
             int KeyValue;
-            UsersDic.Clear();
+           
             UsersDic = MyFile.LoadIndexFileIntoDic(IndexFileName);
+
             int id = UsersDic.Count() + 1;
             user.ID = id.ToString();
             //ContainsKey Method Look for the Specified Key In the Dic
             if (!UsersDic.ContainsKey(id))
             {
                 //Founded!
-                using (FileStream UsersFile = new FileStream(UsersFileName, FileMode.Append, FileAccess.Write))
+                using (FileStream UsersFile = new FileStream(UsersFileName, FileMode.Open, FileAccess.Write))
                 {
                     using (StreamWriter MyStreamWriter = new StreamWriter(UsersFile))
                     {
@@ -43,8 +44,8 @@ namespace Bank_System.Classes
                         Pos = Convert.ToInt32(UsersFile.Position);// Address of the record
                         KeyValue = Convert.ToInt32(user.ID);// Primary key 
 
-                        string Record = MyFile.ConvertUsersDataToRecord(user);// Convert Client Object to Record
-                        MyStreamWriter.WriteLine(Record);// Save Record in Client File
+                        string Record = MyFile.ConvertUsersDataToRecord(user);// Convert User Object to Record
+                        MyStreamWriter.WriteLine(Record);// Save Record in User File
 
                         UsersDic.Add(KeyValue, Pos);// Add Index of the record to Dic
 
